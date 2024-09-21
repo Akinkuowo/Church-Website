@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Church Management</title>
+    <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons for the buttons -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100">
+    <header class="flex p-6 justify-between items-center">
+        <div class="flex">
+            <div class="">
+                <img src="img/logo.png" alt="Logo" class="mb-6"> 
+            </div>
+            <div>
+                <h3 class="font-bold text-sm">The <br />Churched<br /> App</h3>
+            </div>
+        </div>
+        <a href="#" class="text-sm font-semibold text-gray-600">Log In</a>
+    </header>
+    <!-- Container -->
+    <div class="min-h-screen flex items-center justify-center py-12 px-4">
+        <div class="max-w-4xl w-full bg-white p-8 rounded-lg shadow-md">
+
+            <!-- Title and Subtitle -->
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-semibold">Single Church Management</h2>
+                <p class="text-gray-500">Perfect for individual churches looking to streamline their operations</p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="flex justify-center space-x-8 mb-8">
+                <a href="single-church-management.html" class="border-b-4 border-gray-300 pb-2 text-gray-800">Account Info</a>
+                <a href="single-email-verification.html" class="border-b-4 border-green-500 pb-2 text-gray-400">Email Verification</a>
+                <a href="single-church-info.html" class="border-b-4 border-gray-300 pb-2 text-gray-400">Church Info</a>
+                <a href="single-payment.html" class="border-b-4 border-gray-300 pb-2 text-gray-400">Payment</a>
+                <a href="#" class="border-b-4 border-gray-300 pb-2 text-gray-400">Confirmation</a>
+            </div>
+
+            <!-- Form Fields -->
+            <div class="text-center mb-8">
+                <h3 class="font-bold">Please verify your church email address</h3>
+                <p class="text-gray-400 text-sm">We have sent a Verification link to the email address provided</p>
+            </div>
+
+            <div class="w-[38rem] justify-between items-center mx-auto mb-72">
+                <button class="bg-gray-200 text-gray-600 px-6 py-2 rounded-md hover:bg-gray-300 mr-2 w-72">Change email address</button>
+                <button class="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 w-72">Resend Email</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="max-w-4xl w-full mt-8 mb-3 text-gray-500 text-sm">
+        © 2024 YouLift, Inc
+    </footer>
+
+</body>
+</html>

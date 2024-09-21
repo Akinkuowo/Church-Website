@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Wall Management</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="flex p-6 justify-between items-center">
+        <div class="flex">
+            <div class="">
+                <img src="img/logo.png" alt="Logo" class="mb-6"> 
+            </div>
+            <div>
+                <h3 class="font-bold text-sm">The <br />Churched<br /> App</h3>
+            </div>
+        </div>
+        <a href="#" class="text-sm font-semibold text-gray-600">Log In</a>
+    </header>
+    <!-- Container -->
+    <div class="min-h-screen flex items-center justify-center py-12 px-4">
+        <div class="max-w-4xl w-full bg-white p-8 rounded-lg shadow-md">
+
+            <!-- Title and Subtitle -->
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-semibold">Church Wall Management</h2>
+                <p class="text-gray-500">Manage your church wall activities</p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="flex justify-center space-x-8 mb-8">
+                <a href="church-wall-management.html" class="border-b-4 border-gray-300 pb-2 text-gray-800">Account Info</a>
+                <a href="email-verification.html" class="border-b-4 border-gray-300 pb-2 text-gray-400">Email Verification</a>
+                <a href="church-info.html" class="border-b-4 border-green-500 pb-2 text-gray-400">Church Info</a>
+                <a href="payment.html" class="border-b-4 border-gray-300 pb-2 text-gray-400">Payment</a>
+                <a href="#" class="border-b-4 border-gray-300 pb-2 text-gray-400">Confirmation</a>
+            </div>
+
+            <!-- Form Fields -->
+            <form>
+                <!-- Church Name -->
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700">Church Name*</label>
+                    <input type="text" placeholder="Church Name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-green-500">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                    <!-- Your role -->
+                    <div class="">
+                        <label class="block text-sm font-medium text-gray-700">Your Role*</label>
+                        <select class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-green-500">
+                            <option>Senior Pastor</option>
+                            <option>Lead Pastor</option>
+                        </select>
+                    </div>
+
+                    <!-- Church Phone -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Church Phone*</label>
+                        <input type="text" placeholder="Church Phone" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-green-500">
+                    </div>
+                </div>
+
+                 <!-- Street Address -->
+                 <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700">Street Address*</label>
+                    <input type="text" placeholder="Street Address" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-green-500">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                    <!-- City -->
+                    <div class="">
+                        <label class="block text-sm font-medium text-gray-700">City*</label>
+                        <select class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-green-500">
+                            <option>City</option>
+                          
+                        </select>
+                    </div>
+
+                    <!-- State -->
+                    <div class="">
+                        <label class="block text-sm font-medium text-gray-700">State/Province*</label>
+                        <select class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-green-500">
+                            <option>State/Province</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                    <!-- City -->
+                    <div class="">
+                        <label class="block text-sm font-medium text-gray-700">Zip Code*</label>
+                        <select class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-green-500">
+                            <option>Zip Code</option>
+                          
+                        </select>
+                    </div>
+
+                    <!-- State -->
+                    <div class="">
+                        <label class="block text-sm font-medium text-gray-700">Country*</label>
+                        <select class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-green-500">
+                            <option>Country</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                    <!-- Church Membership -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Church Membership Strength*</label>
+                        <div class="relative">
+                            <input type="text" placeholder="Enter Numbers" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-green-500">
+                            <i class="fas fa-eye absolute top-3 right-4 text-gray-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Add Any Social Media Link*</label>
+                        <div class="relative">
+                            <input type="text" placeholder="Link" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-green-500">
+                            <i class="fas fa-eye absolute top-3 right-4 text-gray-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terms and Conditions Checkbox -->
+                <div class="mb-6 flex justify-between items-center">
+                    <label class="flex items-center">
+                                          
+                    </label>
+
+                    <div class="flex justify-between items-center">
+                        <button class="bg-gray-200 text-gray-600 px-6 py-2 rounded-md hover:bg-gray-300 mr-2">Back</button>
+                        <button class="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600">Next</button>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+               
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="max-w-4xl w-full mt-8 mb-3 text-gray-500 text-sm">
+        © 2024 YouLift, Inc
+    </footer>
+
+</body>
+</html>

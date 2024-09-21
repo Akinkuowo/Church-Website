@@ -1,0 +1,59 @@
+body *{
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.search-box {
+    padding-left: 2.5rem;
+  }
+.search-box::placeholder {
+    color: #9ca3af; /* Gray placeholder color */
+  }
+.icon-circle {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background-color: #f0fdf4; /* Light green bg */
+    border: 2px solid #6ee7b7; /* Green border */
+  }
+
+   /* Custom style for the toggle switch */
+   .toggle-bg {
+    background-color: #e5e7eb; /* Tailwind gray-200 */
+  }
+  .toggle-bg.enabled {
+    background-color: #10b981; /* Tailwind green-500 */
+  }
+
+  .toggle-bgE {
+    background-color: #e5e7eb; /* Tailwind gray-200 */
+  }
+  .toggle-bgE.enabled {
+    background-color: #10b981; /* Tailwind green-500 */
+  }
+
+  .toggle-bgF {
+    background-color: #e5e7eb; /* Tailwind gray-200 */
+  }
+  .toggle-bgF.enabled {
+    background-color: #10b981; /* Tailwind green-500 */
+  }
+
+  .toggle-bgA {
+    background-color: #e5e7eb; /* Tailwind gray-200 */
+  }
+  .toggle-bgA.enabled {
+    background-color: #10b981; /* Tailwind green-500 */
+  }
+
+  .active-payment{
+    background: rgb(107 114 128 / var(--tw-bg-opacity))
+  }
+
+  .payment{
+    background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+  }

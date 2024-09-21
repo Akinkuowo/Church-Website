@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Church Management</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons for the buttons -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100">
+    <header class="flex p-6 justify-between items-center">
+        <div class="flex">
+            <div class="">
+                <img src="img/logo.png" alt="Logo" class="mb-6"> 
+            </div>
+            <div>
+                <h3 class="font-bold text-sm">The <br />Churched<br /> App</h3>
+            </div>
+        </div>
+        <a href="#" class="text-sm font-semibold text-gray-600">Log In</a>
+    </header>
+    <!-- Container -->
+    <div class="min-h-screen flex items-center justify-center py-12 px-4">
+        <div class="max-w-4xl w-full bg-white p-8 rounded-lg shadow-md">
+
+                <!-- Title and Subtitle -->
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-semibold">Multi Church Management</h2>
+                    <p class="text-gray-500">Idea for organization overseeing multiple churches or campuses</p>
+                </div>
+
+            <!-- Progress Bar -->
+            <div class="flex justify-center space-x-8 mb-8 text-sm">
+                <a href="multi-church-management.html" class="border-b-4 border-gray-300 pb-2 text-gray-800">Account Info</a>
+                <a href="multi-email-verification.html" class="border-b-4 border-gray-300 pb-2 text-gray-400">Email Verification</a>
+                <a href="multi-church-info.html" class="border-b-4 border-gray-300 pb-2 text-gray-400">Church Info</a> 
+                <a href="multi-add-church.html" class="border-b-4 border-gray-300 pb-2 text-gray-400">Add Church </a>
+                <a href="multi-payment.html" class="border-b-4 border-green-500 pb-2 text-gray-400">Payment</a>
+                <a href="#" class="border-b-4 border-gray-300 pb-2 text-gray-400">Confirmation</a>
+                <a href="multi-access-details.html" class="border-b-4 border-gray-300 pb-2 text-gray-400">Access Details</a>
+            </div>
+
+               <!-- Centered "Choose your plan" Text -->
+               <div class="text-center mb-4">
+                <h2 class="text-2xl font-bold">Choose Your Plan</h2>
+            </div>
+
+            <!-- Pay Annually and Pay Monthly Buttons -->
+            <div class="flex justify-center space-x-4 mb-4">
+                <button class="active-payment text-white px-8 py-3 rounded-2xl hover:bg-gray-500" onclick="openAnnual()" id="annualButton">Pay Annually</button>
+                <button class="payment text-white px-8 py-3 rounded-2xl hover:bg-gray-500 hover:text-white" onclick="openMonthly()" id="monthlyButton">Pay Monthly</button>
+            </div>
+
+            <!-- Annual Payment Card -->
+            <div id="annual" class="flex p-6 justify-between items-center space-x-4">
+    
+                <div class="border border-black rounded-lg overflow-hidden h-[41rem]">
+                    <div class="p-4">
+                        <div class="mb-4 pt-4">
+                            <h4 class="text-sm font-bold mb-2">Basic Tier</h4>
+                            <h3 class="text-xl font-semibold">$25/mo</h3>
+                            <p class="text-sm text-green-600 mb-3">Save 15% Annually</p>
+                            <p class="text-sm text-gray-600 mb-8">Our first tier with access to people, events, finances, check-ins, and media. But only embeds for media, no uplaod</p>
+                            <button class="border bg-white px-6 py-2 rounded-md hover:bg-gray-300 mr-2 w-full">Select</button>
+                        </div>
+    
+                        <div class="bg-gray-200 p-4">
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-user text-gray-700 mr-3"></i>
+                                <p>People less than 500</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-calendar text-gray-700 mr-3"></i>
+                                <p>Unlimted Events</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-file text-gray-700 mr-3"></i>
+                                <p>Media Embeds</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-file-text text-gray-700 mr-3"></i>
+                                <p>General Finances</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-check-square text-gray-700 mr-3"></i>
+                                <p>Daily Check-ins</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-bar-chart text-gray-700 mr-3"></i>
+                                <p>Mobile App Management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="border border-black rounded-lg overflow-hidden  h-[41rem]">
+                    <div class="p-4 ">
+                        <div class="mb-4 pt-4">
+                            <h4 class="text-sm font-bold mb-2">Standard Tier</h4>
+                            <h3 class="text-xl font-semibold">$45/mo</h3>
+                            <p class="text-sm text-green-600 mb-3">Save 15% Annually</p>
+                            <p class="text-sm text-gray-600 mb-8">Our first tier with access to people, events, finances, check-ins, and media. But only embeds for media, no uplaod</p>
+                            <button class="border bg-white px-6 py-2 rounded-md hover:bg-gray-300 mr-2 w-full">Select</button>
+                        </div>
+    
+                        <div class="bg-gray-200 p-4">
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-user text-gray-700 mr-3"></i>
+                                <p>People less than 1000</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-calendar text-gray-700 mr-3"></i>
+                                <p>Unlimted Events and Scheduling</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-file text-gray-700 mr-3"></i>
+                                <p>Media Upload (max 500gb/mo)</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-file-text text-gray-700 mr-3"></i>
+                                <p>General Finances</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-check-square text-gray-700 mr-3"></i>
+                                <p>Daily Check-ins</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-bar-chart text-gray-700 mr-3"></i>
+                                <p>Mobile App Management</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-suitcase text-gray-700 mr-3"></i>
+                                <p>Facilities & Resources </p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-shopping-bag text-gray-700 mr-3"></i>
+                                <p>Stores </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-black rounded-lg overflow-hidden  h-[41rem]">
+                    <div class="p-4">
+                        <div class="mb-4 pt-4">
+                            <h4 class="text-sm font-bold mb-2">Premium Tier</h4>
+                            <h3 class="text-xl font-semibold">Custom/mo</h3>
+                            <p class="text-sm text-green-600 mb-3">Save 15% Annually</p>
+                            <p class="text-sm text-gray-600 mb-8">Our first tier with access to people, events, finances, check-ins, and media. But only embeds for media, no uplaod</p>
+                            <button class="border bg-white px-6 py-2 rounded-md hover:bg-gray-300 mr-2 w-full">Contact Support</button>
+                        </div>
+    
+                        <div class="bg-gray-200 p-4">
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-user text-gray-700 mr-3"></i>
+                                <p>Unlimited People</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-calendar text-gray-700 mr-3"></i>
+                                <p>Unlimted Events With Scheduling</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-file text-gray-700 mr-3"></i>
+                                <p>Unlimited Media Upload</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-file-text text-gray-700 mr-3"></i>
+                                <p>General Finances</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-check-square text-gray-700 mr-3"></i>
+                                <p>Daily Check-ins</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-bar-chart text-gray-700 mr-3"></i>
+                                <p>Mobile App Management</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-suitcase text-gray-700 mr-3"></i>
+                                <p>Facilities & Resources </p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-shopping-bag text-gray-700 mr-3"></i>
+                                <p>Stores </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+             <!-- Monthly Payment Card -->
+             <div id="monthly" class="flex p-6 justify-between items-center hidden space-x-4">
+                
+                <div class="border border-black rounded-lg overflow-hidden h-[41rem]">
+                    <div class="p-4">
+                        <div class="mb-4 pt-4">
+                            <h4 class="text-sm font-bold mb-2">Basic Tier</h4>
+                            <h3 class="text-xl font-semibold">$25/mo</h3>
+                            <p class="text-sm text-green-600 mb-3">Save 15% Annually</p>
+                            <p class="text-sm text-gray-600 mb-8">Our first tier with access to people, events, finances, check-ins, and media. But only embeds for media, no uplaod</p>
+                            <button class="border bg-white px-6 py-2 rounded-md hover:bg-gray-300 mr-2 w-full">Select</button>
+                        </div>
+    
+                        <div class="bg-gray-200 p-4">
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-user text-gray-700 mr-3"></i>
+                                <p>People less than 500</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-calendar text-gray-700 mr-3"></i>
+                                <p>Unlimted Events</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-file text-gray-700 mr-3"></i>
+                                <p>Media Embeds</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-file-text text-gray-700 mr-3"></i>
+                                <p>General Finances</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-check-square text-gray-700 mr-3"></i>
+                                <p>Daily Check-ins</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-bar-chart text-gray-700 mr-3"></i>
+                                <p>Mobile App Management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="border border-black rounded-lg overflow-hidden  h-[41rem]">
+                    <div class="p-4 ">
+                        <div class="mb-4 pt-4">
+                            <h4 class="text-sm font-bold mb-2">Standard Tier</h4>
+                            <h3 class="text-xl font-semibold">$45/mo</h3>
+                            <p class="text-sm text-green-600 mb-3">Save 15% Annually</p>
+                            <p class="text-sm text-gray-600 mb-8">Our first tier with access to people, events, finances, check-ins, and media. But only embeds for media, no uplaod</p>
+                            <button class="border bg-white px-6 py-2 rounded-md hover:bg-gray-300 mr-2 w-full">Select</button>
+                        </div>
+    
+                        <div class="bg-gray-200 p-4">
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-user text-gray-700 mr-3"></i>
+                                <p>People less than 1000</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-calendar text-gray-700 mr-3"></i>
+                                <p>Unlimted Events and Scheduling</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-file text-gray-700 mr-3"></i>
+                                <p>Media Upload (max 500gb/mo)</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-file-text text-gray-700 mr-3"></i>
+                                <p>General Finances</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-check-square text-gray-700 mr-3"></i>
+                                <p>Daily Check-ins</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-bar-chart text-gray-700 mr-3"></i>
+                                <p>Mobile App Management</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-suitcase text-gray-700 mr-3"></i>
+                                <p>Facilities & Resources </p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-shopping-bag text-gray-700 mr-3"></i>
+                                <p>Stores </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-black rounded-lg overflow-hidden  h-[41rem]">
+                    <div class="p-4">
+                        <div class="mb-4 pt-4">
+                            <h4 class="text-sm font-bold mb-2">Premium Tier</h4>
+                            <h3 class="text-xl font-semibold">Custom/mo</h3>
+                            <p class="text-sm text-green-600 mb-3">Save 15% Annually</p>
+                            <p class="text-sm text-gray-600 mb-8">Our first tier with access to people, events, finances, check-ins, and media. But only embeds for media, no uplaod</p>
+                            <button class="border bg-white px-6 py-2 rounded-md hover:bg-gray-300 mr-2 w-full">Contact Support</button>
+                        </div>
+    
+                        <div class="bg-gray-200 p-4">
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-user text-gray-700 mr-3"></i>
+                                <p>People less than 1000</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-calendar text-gray-700 mr-3"></i>
+                                <p>Unlimted Events With Scheduling</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-file text-gray-700 mr-3"></i>
+                                <p>Unlimited Media Upload</p>
+                            </div>
+        
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-file-text text-gray-700 mr-3"></i>
+                                <p>General Finances</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-check-square text-gray-700 mr-3"></i>
+                                <p>Daily Check-ins</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-bar-chart text-gray-700 mr-3"></i>
+                                <p>Mobile App Management</p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-suitcase text-gray-700 mr-3"></i>
+                                <p>Facilities & Resources </p>
+                            </div>
+                            <div class="flex items-center text-xs mb-5">
+                                <i class="fas fa-shopping-bag text-gray-700 mr-3"></i>
+                                <p>Stores </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="max-w-4xl w-full mt-8 mb-3 text-gray-500 text-sm">
+        © 2024 YouLift, Inc
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

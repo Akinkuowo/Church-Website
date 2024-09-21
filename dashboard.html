@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons for the buttons -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="">
+        <!-- Top Menu -->
+    <div class="w-full bg-white py-3 shadow-sm">
+        <div class="container mx-auto flex items-center justify-between px-4">
+        
+        <!-- Left Section (Logo and Welcome Text) -->
+        <div class="flex items-center space-x-6">
+            <!-- Logo -->
+            <h1 class="font-bold text-xl text-black">thechurchedapp</h1>
+            
+         
+           
+        </div>
+        
+        <!-- Middle Section (Search Bar) -->
+        <div class="flex items-center space-x-20">
+             <!-- Welcome Text -->
+            <h2 class="text-xl font-semibold text-black ml-20">Welcome Jane!</h2>
+            
+            <!-- <i class="fas fa-search relative left-2 top-3 text-gray-400"></i> -->
+            <input
+            type="text"
+            placeholder="What would you like to find?"
+            class="search-box bg-gray-100 text-gray-700 rounded-full py-2 px-4 pl-10 w-80 focus:outline-none"
+            />
+        </div>
+
+        <!-- Right Section (Icons and Profile Image) -->
+        <div class="flex items-center space-x-3">
+            <!-- Circle Icon Buttons -->
+            <button class="icon-circle">
+            <i class="fas fa-table text-green-500"></i>
+            </button>
+            <button class="icon-circle">
+            <i class="fas fa-globe text-green-500"></i>
+            </button>
+            <button class="icon-circle">
+            <i class="fas fa-comment-dots text-green-500"></i>
+            </button>
+            <button class="icon-circle">
+            <i class="fas fa-bell text-green-500"></i>
+            </button>
+
+            <!-- User Profile -->
+            <img
+            src="https://via.placeholder.com/40"
+            alt="User Avatar"
+            class="w-10 h-10 rounded-full border-2 border-gray-200 shadow"
+            />
+        </div>
+        </div>
+    </div>
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-50 rounded-lg border-gray-200 p-4 mr-4">
+            <div class="mb-8">
+                <h1 class="font-bold text-lg">Church Logo</h1>
+            </div>
+            <nav class="space-y-4">
+            <a href="#" class="flex items-center p-2 text-gray-900 bg-gray-100 rounded-lg">
+                <i class="fas fa-tachometer-alt mr-2"></i>
+                <span class="text-sm font-semibold">Dashboard</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                <span class="text-sm">Events</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-users mr-2"></i>
+                <span class="text-sm">People</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-photo-video mr-2"></i>
+                <span class="text-sm">Media</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-wallet mr-2"></i>
+                <span class="text-sm">Finances</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-check-circle mr-2"></i>
+                <span class="text-sm">Check-ins</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-building mr-2"></i>
+                <span class="text-sm">Facilities & Resources</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-chart-line mr-2"></i>
+                <span class="text-sm">Mobile App Analytics</span>
+            </a>
+            </nav>
+
+            <button class="flex fixed bottom-[1px] bg-gray-300 py-3 px-4 w-40 rounded-lg" onclick="openPopupInvite()">
+              <i class="fa fa-user-plus mr-4"></i>
+              <span>Invite</span>
+            </button>
+        </aside>
+
+            <!-- Main Content -->
+        <main class="flex-1 p-8 bg-gray-50 rounded-lg mr-4">
+
+            <!-- Dashboard Section -->
+            <div class="mt-8">
+            <div class="flex items-center justify-between">
+                <h3 class="text-xl font-semibold">Dashboard</h3>
+                <button onclick="openPopup()" class="bg-green-500 text-white px-4 py-2 rounded-lg">Customize Dashboard</button>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 mt-4 lg:grid-cols-1">
+                <!-- People History Card -->
+                <div class="p-6 border-b">
+                <h4 class="font-bold mb-2 flex justify-between items-center">
+                    <span>
+                        <i class="fas fa-users mr-2 text-blue-500"></i> 
+                        People History in the last 30 days
+                    </span>
+                    <a href="#" class="text-blue-500 mt-4 ">View People </a>
+                </h4>
+                <ul class="text-gray-600">
+                    <li class="flex justify-between mb-2">Members added <span class="font-bold text-blue-500">25</span></li>
+                    <li class="flex justify-between mb-2">Active group members <span class="font-bold text-blue-500">54</span></li>
+                </ul>
+                
+                </div>
+
+                <!-- Attendance Card -->
+                <div class="p-6 border-b">
+                    <h4 class="font-bold mb-2 flex justify-between items-center">
+                        <span>
+                            <i class="fas fa-calendar-alt mr-2 text-red-500"></i>
+                            Attendance in the last 7 days
+                        </span>
+                        <a href="#" class="text-red-500 mt-4">View Events</a>
+                </h4>
+                <ul class="text-gray-600">
+                
+                    <li class="mb-2 flex justify-between">
+                    <span>
+                        Mid-Week Service
+                        <span class="block text-sm text-gray-400">September 24, 6pm to 8pm</span>
+                    </span>
+                    <span class="font-bold text-red-500">125</span>
+                    
+                    </li>
+                    <li class="mb-2 flex justify-between">
+                    <span>
+                        Sunday Thanksgiving Service
+                        <span class="block text-sm text-gray-400">September 30, 8am to 11am</span>
+                    </span>
+                    <span class="font-bold text-red-500">345</span>
+                    
+                    </li>
+                </ul>
+                </div>
+
+                <!-- Finances Card -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                <h4 class="font-semibold mb-2 flex justify-between items-center">
+                    <span>
+                        <i class="fas fa-wallet mr-2 text-green-500"></i>
+                        Finances Report in the last 7 days
+                    </span>
+                    <a href="#" class="text-green-500 mt-4 block">View Finances</a>
+                </h4>
+                <ul class="text-gray-600">
+                    <li class="flex justify-between">Online giving <span class="font-bold text-yellow-500 mb-2">$14,230.00</span></li>
+                    <li class="flex justify-between">Physical giving <span class="font-bold text-yellow-500 mb-2">$8,150.00</span></li>
+                    <li class="flex justify-between">Expenses <span class="font-bold text-yellow-500 mb-2">$10,340.00</span></li>
+                </ul>
+                </div>
+            </div>
+            </div>
+        </main>
+
+            <!-- Right Sidebar -->
+        <aside class="w-80 bg-gray-50 rounded-lg border-gray-200 p-4">
+            <!-- Tags Section -->
+            <div class="mb-6">
+            <div class="flex justify-between items-center">
+                <h4 class="font-semibold">
+                    <i class="fas fa-tags mr-2"></i>
+                    Tags
+                </h4>
+                <button onclick="openPopupTag()" class="mt-4 bg-gray-200 text-sm px-4 py-2 rounded-lg relative bottom-1">+ Add Tags</button>
+                <button onclick="openPopupTagSetting()" class="rounded-full border p-2 w-10">
+                    <i class="fas fa-gear"></i>
+                </button>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-2 ">
+                <button class="bg-gray-100 text-xs px-2 py-1 rounded-lg">Prayer</button>
+                <button class="bg-gray-100 text-xs px-2 py-1 rounded-lg">Testimony</button>
+                <button class="bg-gray-100 text-xs px-2 py-1 rounded-lg">Blessing</button>
+                <button class="bg-gray-100 text-xs px-2 py-1 rounded-lg">Other</button>
+                <button class="bg-gray-100 text-xs px-2 py-1 rounded-lg">Encouragement</button>
+                <button class="bg-gray-100 text-xs px-2 py-1 rounded-lg">Scripture Sharing</button>
+            </div>
+            </div>
+
+            <!-- Mobile App Analytics Section -->
+            <div>
+            <h4 class="font-semibold">
+                <i class="fas fa-chart-line mr-2"></i> 
+                Mobile App Analytics in the last 30 days
+            </h4>
+            <ul class="mt-4 text-gray-600 space-y-2">
+                <li class="flex justify-between">Sign Ups <span class="font-bold">59</span></li>
+                <li class="flex justify-between">Log Ins <span class="font-bold">259</span></li>
+                <li class="flex justify-between">Post Feeds <span class="font-bold">45.0%</span></li>
+                <li class="flex justify-between">Spaces <span class="font-bold">25.5%</span></li>
+                <li class="flex justify-between">Prayer Requests <span class="font-bold">8.5%</span></li>
+                <li class="flex justify-between">Bible Reading <span class="font-bold">6.0%</span></li>
+                <li class="flex justify-between">Active Users <span class="font-bold">6.5%</span></li>
+            </ul>
+            <a href="#" class="text-green-500 mt-4 block">View Mobile App Analytics</a>
+            </div>
+        </aside>
+
+        <!-- Popup Modal for customised dashboard -->
+        <div id="popupModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+          <!-- Customize Dashboard Modal -->
+          <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6 mt-10 max-h-screen overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-xl font-semibold text-black">Customize Dashboard</h2>
+              <button onclick="closePopup()" class="bg-gray-200 text-gray-700 p-2 rounded-full hover:bg-gray-300 px-4">
+                <span class="text-sm">Close <i class="fa fa-close font-lg ml-2"></i></span> <!-- Close button -->
+              </button>
+            </div>
+        
+            <!-- Dashboard Options -->
+            <div class="space-y-8 overflow-y-auto max-h-[70vh]">
+              <!-- People Section -->
+              <div class="text-sm">
+                <h3 class="text-md font-semibold">People</h3>
+                <div class="flex justify-between items-center mb-4 mt-2">
+                  <div class="flex items-center">
+                    <p class="text-sm text-gray-400 mr-3">People history</p>
+                    <select class="border border-gray-300 rounded-lg px-3 py-2">
+                      <option>Last 7 days</option>
+                      <option>Last 14 days</option>
+                      <option>Last 30 days</option>
+                      <option>Last 3 months</option>
+                      <option>Last 1 year</option>
+                    </select>
+                  </div>
+                  <div class="flex items-center">
+                    <label class="mr-2">Disable</label>
+                    <!-- Toggle Switch -->
+                      <div id="toggleSwitch" class="relative inline-block w-12 h-6">
+                        <input type="checkbox" id="slider" class="hidden" onchange="toggleSwitch()">
+                        <div class="toggle-bg absolute inset-0 rounded-full transition duration-200"></div>
+                        <div id="toggleCircle" class="absolute w-6 h-6 bg-white rounded-full shadow-md transition transform duration-200"></div>
+                      </div>
+                    <label class="ml-2">Enable</label>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  <div class="bg-gray-200 py-2 px-4 rounded-lg">
+                    <input type="checkbox" checked>
+                    Total Members Added
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Active Members
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    New Members
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Inactive Members
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Active Groups
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Inactive Groups
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Active Group Members
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Inactive Group Members
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Events Section -->
+              <div class="text-sm">
+                <h3 class="text-md font-semibold">Events</h3>
+                <div class="flex justify-between items-center mb-4 mt-2">
+                  <div class="flex items-center">
+                    <p class="text-sm text-gray-400 mr-3">Attendance</p>
+                    <select class="border border-gray-300 rounded-lg px-3 py-2">
+                      <option>Last 7 days</option>
+                      <option>Last 14 days</option>
+                      <option>Last 30 days</option>
+                      <option>Last 3 months</option>
+                      <option>Last 1 year</option>
+                    </select>
+                  </div>
+                  <div class="flex items-center">
+                    <label class="mr-2">Disable</label>
+                    <!-- Toggle Switch -->
+                    <div id="toggleSwitchE" class="relative inline-block w-12 h-6">
+                      <input type="checkbox" id="sliderE" class="hidden" onchange="toggleSwitchE()">
+                      <div class="toggle-bgE absolute inset-0 rounded-full transition duration-200"></div>
+                      <div id="toggleCircleE" class="absolute w-6 h-6 bg-white rounded-full shadow-md transition transform duration-200"></div>
+                    </div>
+                    <label class="ml-2">Enable</label>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  <div class="bg-gray-200 py-2 px-4 rounded-lg">
+                    <input type="checkbox" checked>
+                    Mid-Week Service
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox" checked>
+                    Sunday Service
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Special Events
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    First Timers
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Leaders
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Workers
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Male Attendees
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Female Attendees
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Young Adult Attendees
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Children Attendees
+                  </div>
+                </div>
+              </div>
+
+              <!-- Finances Section -->
+              <div class="text-sm">
+                <h3 class="text-md font-semibold">Finances</h3>
+                <div class="flex justify-between items-center mb-4 mt-2">
+                  <div class="flex items-center">
+                    <p class="text-sm text-gray-400 mr-3">Finance Reports</p>
+                    <select class="border border-gray-300 rounded-lg px-3 py-2">
+                      <option>Last 7 days</option>
+                      <option>Last 14 days</option>
+                      <option>Last 30 days</option>
+                      <option>Last 3 months</option>
+                      <option>Last 1 year</option>
+                    </select>
+                  </div>
+                  <div class="flex items-center">
+                    <label class="mr-2">Disable</label>
+                    <!-- Toggle Switch -->
+                    <div id="toggleSwitchF" class="relative inline-block w-12 h-6">
+                      <input type="checkbox" id="sliderF" class="hidden" onchange="toggleSwitchF()">
+                      <div class="toggle-bgF absolute inset-0 rounded-full transition duration-200"></div>
+                      <div id="toggleCircleF" class="absolute w-6 h-6 bg-white rounded-full shadow-md transition transform duration-200"></div>
+                    </div>
+                    <label class="ml-2">Enable</label>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  <div class="bg-gray-200 py-2 px-4 rounded-lg">
+                    <input type="checkbox" checked>
+                    Online Giving
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox" checked>
+                    Physical Giving
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox" checked>
+                    Expenses
+                  </div>
+                  <div class="bg-gray-200 py-s2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Tithes
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Offerings
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Special Contributions
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Funds
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Pledges
+                  </div>
+                  
+                </div>
+              </div>
+
+              <!-- App Analytics Section -->
+              <div class="text-sm">
+                <h3 class="text-md font-semibold">Mobile App Analytics</h3>
+                <div class="flex justify-between items-center mb-4 mt-2">
+                  <div class="flex items-center">
+                    <p class="text-sm text-gray-400 mr-3">Activities Report</p>
+                    <select class="border border-gray-300 rounded-lg px-3 py-2">
+                      <option>Last 7 days</option>
+                      <option>Last 14 days</option>
+                      <option selected>Last 30 days</option>
+                      <option>Last 3 months</option>
+                      <option>Last 1 year</option>
+                    </select>
+                  </div>
+                  <div class="flex items-center">
+                    <label class="mr-2">Disable</label>
+                     <!-- Toggle Switch -->
+                     <div id="toggleSwitchA" class="relative inline-block w-12 h-6">
+                      <input type="checkbox" id="sliderA" class="hidden" onchange="toggleSwitchA()">
+                      <div class="toggle-bgA absolute inset-0 rounded-full transition duration-200"></div>
+                      <div id="toggleCircleA" class="absolute w-6 h-6 bg-white rounded-full shadow-md transition transform duration-200"></div>
+                    </div>
+                    <label class="ml-2">Enable</label>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  <div class="bg-gray-200 py-2 px-4 rounded-lg">
+                    <input type="checkbox" checked>
+                    Sign Ups
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox" checked>
+                    Log Ins
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox" checked>
+                    Post Feeds
+                  </div>
+                  <div class="bg-gray-200 py-s2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Spaces
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox" checked>
+                    Prayer Requests
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox" checked>
+                    Bible Reading
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox" checked>
+                    Active Users
+                  </div>
+                  <div class="bg-gray-200 py-2 px-4 rounded-md">
+                    <input type="checkbox">
+                    Inactive Users
+                  </div>
+                  
+                </div>
+              </div>
+        
+              <!-- Action Buttons -->
+              <div class="flex justify-start space-x-4 mt-6">
+                <button class="bg-gray-300 text-black py-2 px-6 rounded-md">Cancel</button>
+                <button class="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600 transition duration-300">
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- Popup Modal for adding tags -->
+        <div id="popupModalTags" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+          <div class="bg-white rounded-lg shadow-lg w-full max-w-lg p-10 relative">
+            <!-- Close Button -->
+            <button onclick="closePopupTag()" class="absolute top-3 right-3 bg-red text-black rounded-full p-2">
+              <i class="fa fa-close font-lg"></i>
+            </button>
+
+            <div class="text-centr">
+              <div class=" justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold text-black">Add Tags</h2>
+                <p class="text-gray-400 mb-6 text-xs">
+                  You have the option of creating 6 tags. 1 tag remainings
+                </p>
+              </div>
+
+              <div class="h-50">
+                <!-- Placeholder Icon -->
+                <input
+                type="text"
+                placeholder="Name of tag [Max 50 characters]"
+                class="search-box bg-gray-100 text-gray-700 rounded-lg py-2 px-4 pl-10 w-full focus:outline-none"
+                />
+
+                <button class="mt-4 bg-gray-200 text-sm px-4 py-2 rounded-lg">+ Add another tag</button>
+
+                <div class="flex mt-5">
+                   <!-- Cancel Button -->
+                   <button class="bg-gray-500 text-white py-2 px-6 rounded-md hover:bg-green-600 transition duration-300 mr-2">
+                    cancel
+                  </button>
+
+                  <!-- Add Button -->
+                   <button class="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600 transition duration-300">
+                    Add tag
+                  </button>
+                </div>
+
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- Popup Modal for tag setting -->
+        <div id="popupModalTagSetting" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+          <div class="bg-white rounded-lg shadow-lg w-full max-w-lg p-10 relative">
+            <!-- Close Button -->
+            <button onclick="closePopupTagSetting()" class="absolute top-3 right-3 bg-red text-black rounded-full p-2">
+              <i class="fa fa-close font-lg"></i>
+            </button>
+
+            <div class="text-centr">
+              <div class=" justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold text-black">Tag Setting</h2>
+                <p class="text-gray-400 mb-6 text-xs">
+                  Edit and remove tag
+                </p>
+              </div>
+
+              <div class="h-50">
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  <div class="flex items-center justify-between bg-gray-200 py-2 px-4 rounded-lg h-11">
+                    Prayer
+                    <i class="fa fa-plus"></i>
+                  </div>
+                  <div class="flex items-center justify-between bg-gray-200 py-2 px-4 rounded-lg h-11">
+                    Testimonies
+                    <i class="fa fa-plus"></i>
+                  </div>
+                  <div class="flex items-center justify-between bg-gray-200 py-2 px-4 rounded-lg h-11">
+                    Blessing
+                    <i class="fa fa-plus"></i>
+                  </div>
+                  <div class="flex items-center justify-between bg-gray-200 py-2 px-4 rounded-lg h-11">
+                    Testimonies
+                    <i class="fa fa-plus"></i>
+                  </div>
+                  <div class="flex items-center justify-between bg-gray-200 py-2 px-4 rounded-lg h-11 text-sm">
+                    Encouragement
+                    <i class="fa fa-plus"></i>
+                  </div>
+                   <div class="flex items-center justify-between bg-gray-200 py-2 px-4 rounded-lg h-11 text-sm">
+                    Scripture Sharing
+                    <i class="fa fa-plus"></i>
+                  </div>
+                  <div class="flex items-center justify-between bg-gray-200 py-2 px-4 rounded-lg h-11">
+                    Others
+                    <i class="fa fa-plus"></i>
+                  </div>
+                  
+                  
+                </div>
+
+                <div class="flex mt-5">
+                   <!-- Cancel Button -->
+                   <button class="bg-gray-500 text-white py-2 px-6 rounded-md hover:bg-green-600 transition duration-300 mr-2">
+                    cancel
+                  </button>
+
+                  <!-- Add Button -->
+                   <button class="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600 transition duration-300">
+                    Add tag
+                  </button>
+                </div>
+
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- Popup Modal for invite-->
+         <div id="popupModalInvite"  class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+          <div class="bg-white rounded-lg shadow-lg w-full max-w-xl p-10 relative">
+             <!-- Close Button -->
+             <button onclick="closePopupInvite()" class="absolute top-3 right-3 bg-red text-black rounded-full p-2">
+              <i class="fa fa-close font-lg"></i>
+            </button>
+
+            <!-- user Button -->
+              <button class="text-gray-500 mb-4">
+                  <i class="fas fa-user text-[3rem]"></i>
+              </button>
+    
+              <h2 class="text-2xl font-semibold mb-4">Invite your members</h2>
+    
+              <!-- URL Input and Dropdown -->
+              <div class="flex items-center space-x-3 mb-4">
+                  <!-- Input URL -->
+                  <input type="text" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none" value="https://linktosharewithmembersofthechurch" readonly>
+      
+                  <!-- Dropdown -->
+                  <div class="relative">
+                      <button id="dropdownBtn" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-md border border-gray-300 flex items-center focus:outline-none">
+                          Standard <i class="ml-2 fas fa-chevron-down"></i>
+                      </button>
+                      <!-- Dropdown Menu -->
+                      <div id="dropdownMenu" class="hidden absolute left-0 mt-2 w-32 bg-white rounded-md shadow-lg">
+                          <ul class="text-gray-700">
+                              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Standard</li>
+                              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Check-In</li>
+                              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Member</li>
+                          </ul>
+                      </div>
+                  </div>
+      
+                  <!-- Copy Link Button -->
+                  <button class="bg-green-500 text-white px-4 py-2 rounded-md text-sm">
+                      Copy Link
+                  </button>
+              </div>
+      
+              <!-- Email Input -->
+              <div class="flex items-center space-x-3 mb-4">
+                  <input type="email" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none" placeholder="exampleemail@gmail.com">
+                  <button class="bg-green-500 text-white px-4 py-2 rounded-md">
+                      Invite
+                  </button>
+              </div>
+          </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
