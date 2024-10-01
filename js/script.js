@@ -137,3 +137,86 @@ const toggleSwitch = document.getElementById("toggleSwitch");
              dropdownMenu.classList.add('hidden');
          }
      });
+
+
+     const ctx = document.getElementById('membersChart').getContext('2d');
+     const membersChart = new Chart(ctx, {
+         type: 'line',
+         data: {
+             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+             datasets: [{
+                 label: 'Total Members',
+                 data: [0, 1000, 1100, 1800, 800, 2000, 2100, 2000, 1800, 1900, 3000, 4000],
+                 borderColor: 'rgba(34, 197, 94, 1)',
+                 backgroundColor: 'rgba(34, 197, 94, 0.2)',
+                 borderWidth: 2,
+                 tension: 0.4, // Smooth curves
+                 pointRadius: 4,
+                 pointBackgroundColor: 'rgba(34, 197, 94, 1)'
+             }]
+         },
+         options: {
+             responsive: true,
+             maintainAspectRatio: true,
+             scales: {
+                 y: {
+                     beginAtZero: true,
+                     grid: {
+                         color: 'rgba(229, 231, 235, 0.5)' // Tailwind's gray-200
+                     }
+                 },
+                 x: {
+                     grid: {
+                         display: false
+                     }
+                 }
+             },
+             plugins: {
+                 legend: {
+                     display: false
+                 }
+             }
+         }
+     });
+
+     const ctx2 = document.getElementById('membersChart2').getContext('2d');
+     const membersChart2 = new Chart(ctx2, {
+         type: 'line',
+         data: {
+             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+             datasets: [{
+                 label: 'Total Members',
+                 data: [0, 1000, 1100, 1800, 800, 2000, 2100, 2000, 1800, 1900, 3000, 4000],
+                 borderColor: 'rgba(34, 197, 94, 1)', // Tailwind's green-500
+                 backgroundColor: 'rgba(34, 197, 94, 0.2)',
+                 borderWidth: 2,
+                 tension: 0.4, // Smooth curves
+                 pointRadius: 4,
+                 pointBackgroundColor: 'rgba(34, 197, 94, 1)'
+             }]
+         },
+         options: {
+             responsive: true,
+             maintainAspectRatio: true,
+             scales: {
+                 y: {
+                     beginAtZero: true,
+                     grid: {
+                         color: 'rgba(229, 231, 235, 0.5)'
+                     }
+                 },
+                 x: {
+                     grid: {
+                         display: false
+                     }
+                 }
+             },
+             plugins: {
+                 legend: {
+                     display: false
+                 }
+             }
+         }
+     });
+
+     
