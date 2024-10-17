@@ -137,23 +137,23 @@
                     <a href="single-church-media-dashboard.html">Media</a>
                     <a href="single-church-finance-dashboard.html">Finances</a>
                     <a href="single-church-checkIn-dashboard.html" >Check-ins</a>
-                    <a href="single-church-mobile-app-dashboard.html" class="text-black border-b-2 border-black pb-1 focus:outline-none">Mobile App</a>
-                    <a href="single-church-activities-dashboard.html">Activities</a>
+                    <a href="single-church-mobile-app-dashboard.html">Mobile App</a>
+                    <a href="single-church-activities-dashboard.html" class="text-black border-b-2 border-black pb-1 focus:outline-none">Activities</a>
                 </div>
         
                 <!-- Check-In Section -->
                 <div class="mt-6">
                     <div class="flex justify-between items-center">
                         <div class="flex items-center space-x-2">
-                            <i class="fas fa-line-chart text-xl"></i>
-                            <h3 class="text-lg font-semibold">Mobile App</h3>
+                            <i class="fas fa-calendar-alt text-xl"></i>
+                            <h3 class="text-lg font-semibold">Activities</h3>
                         </div>
                         <div class="flex items-center space-x-4">
                             <button onclick="openPopup()"  class="text-sm text-gray-500 focus:outline-none font-bold">Customize</button>
                             <!-- <button  class="border border-gray-800 px-4 py-1 rounded-md text-sm hover:bg-gray-800 hover:text-white">View people report</button>  -->
                             <div class="relative" x-data="{ open: false }">
                                 <button @click="open = !open" class="bg-white border rounded-md px-4 py-2 font-semibold shadow-md hover:bg-gray-100 transition">
-                                    View Mobile App Report
+                                    View Activities
                                 </button>
                                 <!-- Dropdown Menu -->
                                 <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-lg overflow-hidden">
@@ -170,18 +170,18 @@
         
                     <!-- Total Members Section -->
                      <div class="flex items-center space-x-1 text-sm">
-                         <h2>Mobile App</h2>
+                         <h2>Participation Rate</h2>
                          
                      </div>
                     <div class="mt-6 bg-white p-4 rounded-md shadow-sm border">
                         <div class="flex justify-between items-center mb-4">
                             <div>
                                 <h4 class="text-lg font-semibold cursor-pointer">
-                                    Total Sign Ups
+                                    Church Fasting
                                     <i class="fas fa-question-circle text-sm text-gray-400"></i>
                                 </h4>
 
-                                <div class="text-3xl font-bold mt-1">524</div>
+                                <div class="text-3xl font-bold mt-1">64%</div>
                                 <div class="text-green-500 text-sm mt-1">
                                     <i class="fas fa-arrow-up"></i> 0.5%
                                 </div>
@@ -206,7 +206,7 @@
 
                       <!-- Check-ins 2 Section -->
                       <div class="flex items-center space-x-1 text-sm mt-4">
-                        <h2>Mobile App</h2>
+                        <h2>Frequency</h2>
                         
                       </div>
                       <div class="mt-6 bg-white p-4 rounded-md shadow-sm border">
@@ -214,14 +214,14 @@
                             <div>
                                 <div>
                                     <h4 class="text-lg font-semibold ">
-                                        Total Log Ins
+                                        Street Outreach 
                                         <i class="fas fa-question-circle text-sm text-gray-400"></i>
                                     </h4>
     
                                     <!-- <div class="text-3xl font-bold mt-1">4000</div> -->
-                                    <div class="text-3xl font-bold mt-1">4000</div>
-                                    <div class="text-green-500 text-sm mt-1">
-                                        <i class="fas fa-arrow-up"></i> 0.5%
+                                    <div class="text-3xl font-bold mt-1">20%</div>
+                                    <div class="text-red-500 text-sm mt-1">
+                                        <i class="fas fa-arrow-down"></i> 0.5%
                                     </div>
                                 </div>
                                 
@@ -344,8 +344,8 @@
                 <button class="text-sm text-gray-500 pb-2">Media</button>
                 <button class="text-sm text-gray-500 pb-2">Finances</button>
                 <button class="text-sm text-gray-500 pb-2">Check-ins</button>
-                <button class="text-sm text-gray-500 pb-2 border-b-2 border-black">Mobile app</button>
-                <button class="text-sm text-gray-500 pb-2">Activities</button>
+                <button class="text-sm text-gray-500 pb-2">Mobile app</button>
+                <button class="text-sm text-gray-500 pb-2  border-b-2 border-black">Activities</button>
             </div>
 
             <!-- Content -->
@@ -353,74 +353,23 @@
 
                 <!-- Revenue Section -->
                 <div>
-                    <h3 class="font-semibold mb-2">Mobile App (max 20 options)</h3>
+                    <h3 class="font-semibold mb-2">Activities (max 8 options)</h3>
                     <div class="flex flex-wrap gap-4">
                         <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
                             <input type="checkbox" checked class="form-checkbox h-4 w-4">
-                            <span>Total Sign Ups</span>
-                        </label>
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Total Log ins</span>
-                        </label>
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Active Users</span>
+                            <span>Participation Rate</span>
                         </label>
 
                         <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
                             <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Users Breakdown</span>
-                        </label>
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>New Users</span>
+                            <span>People Breakdown</span>
                         </label>
 
                         <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Existing Users</span>
-                        </label>
-
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Inactive Users</span>
-                        </label>
-
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Deleted Users</span>
-                        </label>
-
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Total Posts</span>
-                        </label>
-
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Total Spaces</span>
+                            <input type="checkbox" checked class="form-checkbox h-4 w-4">
+                            <span>Frequency</span>
                         </label>
                         
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Total Groups</span>
-                        </label>
-
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Total likes</span>
-                        </label>
-
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Total Shares</span>
-                        </label>
-
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Total Comments</span>
-                        </label>
                         
                         <button class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
                             <i class="fas fa-plus"></i>
@@ -443,54 +392,95 @@
 
          <!-- Popup Modal for invite-->
          <div id="popupModalInvite"  class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
-          <div class="bg-white rounded-lg shadow-lg w-full max-w-xl p-10 relative">
-             <!-- Close Button -->
-             <button onclick="closePopupInvite()" class="absolute top-3 right-3 bg-red text-black rounded-full p-2">
-              <i class="fa fa-close font-lg"></i>
-            </button>
+            <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative">
+    
+                <!-- Header -->
+                <div class="flex justify-between justify-center items-center mb-4">
+                  <h2 class="text-lg font-semibold">Invite your people</h2>
 
-            <!-- user Button -->
-              <button class="text-gray-500 mb-4">
-                  <i class="fas fa-user text-[3rem]"></i>
-              </button>
-    
-              <h2 class="text-2xl font-semibold mb-4">Invite your members</h2>
-    
-              <!-- URL Input and Dropdown -->
-              <div class="flex items-center space-x-3 mb-4">
-                  <!-- Input URL -->
-                  <input type="text" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none" value="https://linktosharewithmembersofthechurch" readonly>
-      
-                  <!-- Dropdown -->
-                  <div class="relative">
-                      <button id="dropdownBtn" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-md border border-gray-300 flex items-center focus:outline-none">
-                          Standard <i class="ml-2 fas fa-chevron-down"></i>
-                      </button>
-                      <!-- Dropdown Menu -->
-                      <div id="dropdownMenu" class="hidden absolute left-0 mt-2 w-32 bg-white rounded-md shadow-lg">
-                          <ul class="text-gray-700">
-                              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Standard</li>
-                              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Check-In</li>
-                              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Member</li>
-                          </ul>
-                      </div>
+                  <div class="flex justify-end items-center text-sm text-green-600 mb-0">
+                    <i class="fas fa-link mr-1"></i>
+                    <a href="#" class="hover:underline">Copy link</a>
                   </div>
-      
-                  <!-- Copy Link Button -->
-                  <button class="bg-green-500 text-white px-4 py-2 rounded-md text-sm">
-                      Copy Link
+              
+                  <button class="text-gray-400 hover:text-gray-600">
+                    <i class="fas fa-times"></i>
                   </button>
+                </div>
+            
+                <!-- Copy Link -->
+               
+                <!-- Input and Dropdown -->
+                <div class="mb-6">
+                  <label for="invite" class="block text-sm font-medium text-gray-700 mb-1">Invite by email</label>
+                  <div class="flex items-center border border-gray-300 rounded-md">
+                    <input type="text" id="invite" placeholder="Email, comma separated" class="w-full py-2 px-3 text-sm border-none focus:ring-0 focus:outline-none">
+                    <select class="py-2 px-3 bg-transparent text-sm  border-gray-300 focus:outline-none">
+                      <option>
+                        Standard
+                      </option>
+                      <option>Admin</option>
+                    </select>
+                  </div>
+                </div>
+            
+                <!-- Buttons -->
+                <div class="flex justify-end space-x-2">
+                  <button class="px-4 py-2 text-sm text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200">Cancel</button>
+                  <button class="px-4 py-2 text-sm text-white bg-gray-200 rounded-md cursor-not-allowed">Send invite</button>
+                </div>
               </div>
+         </div>
+
+         <!-- <div id="popupModalInvite"  class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white rounded-lg shadow-lg w-full max-w-xl p-10 relative"> -->
+               <!-- Close Button -->
+               <!-- <button onclick="closePopupInvite()" class="absolute top-3 right-3 bg-red text-black rounded-full p-2">
+                <i class="fa fa-close font-lg"></i>
+              </button> -->
+  
+              <!-- user Button -->
+                <!-- <button class="text-gray-500 mb-4">
+                    <i class="fas fa-user text-[3rem]"></i>
+                </button>
       
-              <!-- Email Input -->
-              <div class="flex items-center space-x-3 mb-4">
-                  <input type="email" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none" placeholder="exampleemail@gmail.com">
-                  <button class="bg-green-500 text-white px-4 py-2 rounded-md">
-                      Invite
-                  </button>
-              </div>
-          </div>
-        </div>
+                <h2 class="text-2xl font-semibold mb-4">Invite your members</h2> -->
+      
+                <!-- URL Input and Dropdown -->
+                <!-- <div class="flex items-center space-x-3 mb-4"> -->
+                    <!-- Input URL -->
+                    <!-- <input type="text" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none" value="https://linktosharewithmembersofthechurch" readonly> -->
+        
+                    <!-- Dropdown -->
+                    <!-- <div class="relative">
+                        <button id="dropdownBtn" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-md border border-gray-300 flex items-center focus:outline-none">
+                            Standard <i class="ml-2 fas fa-chevron-down"></i>
+                        </button> -->
+                        <!-- Dropdown Menu -->
+                        <!-- <div id="dropdownMenu" class="hidden absolute left-0 mt-2 w-32 bg-white rounded-md shadow-lg">
+                            <ul class="text-gray-700">
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Standard</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Check-In</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Member</li>
+                            </ul>
+                        </div>
+                    </div> -->
+        
+                    <!-- Copy Link Button -->
+                    <!-- <button class="bg-green-500 text-white px-4 py-2 rounded-md text-sm">
+                        Copy Link
+                    </button>
+                </div> -->
+        
+                <!-- Email Input -->
+                <!-- <div class="flex items-center space-x-3 mb-4">
+                    <input type="email" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none" placeholder="exampleemail@gmail.com">
+                    <button class="bg-green-500 text-white px-4 py-2 rounded-md">
+                        Invite
+                    </button>
+                </div> -->
+            <!-- </div>
+         </div> -->
 
 
     </div>

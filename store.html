@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons for the buttons -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ 
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="">
+        <!-- Top Menu -->
+    <div class="w-full bg-white py-3 shadow-sm">
+        <div class="container mx-auto flex items-center justify-between px-4">
+        
+        <!-- Left Section (Logo and Welcome Text) -->
+        <div class="flex items-center space-x-6">
+            <!-- Logo -->
+            <h1 class="font-bold text-xl text-black">thechurchedapp</h1>
+            
+         
+           
+        </div>
+        
+        <!-- Middle Section (Search Bar) -->
+        <div class="flex items-center space-x-20">
+             <!-- Welcome Text -->
+            <h2 class="text-xl font-semibold text-black ml-20">Welcome Jane!</h2>
+            
+            <!-- <i class="fas fa-search relative left-2 top-3 text-gray-400"></i> -->
+            <input
+            type="text"
+            placeholder="What would you like to find?"
+            class="search-box bg-gray-100 text-gray-700 rounded-full py-2 px-4 pl-10 w-80 focus:outline-none"
+            />
+        </div>
+
+        <!-- Right Section (Icons and Profile Image) -->
+        <div class="flex items-center space-x-3">
+            <!-- Circle Icon Buttons -->
+            <button class="icon-circle">
+            <i class="fas fa-table text-green-500"></i>
+            </button>
+            <button class="icon-circle">
+            <i class="fas fa-globe text-green-500"></i>
+            </button>
+            <button class="icon-circle">
+            <i class="fas fa-comment-dots text-green-500"></i>
+            </button>
+            <button class="icon-circle">
+            <i class="fas fa-bell text-green-500"></i>
+            </button>
+
+            <!-- User Profile -->
+            <img
+            src="https://via.placeholder.com/40"
+            alt="User Avatar"
+            class="w-10 h-10 rounded-full border-2 border-gray-200 shadow"
+            />
+        </div>
+        </div>
+    </div>
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-50 rounded-lg border-gray-200 p-4 mr-4">
+            <div class="mb-8">
+                <h1 class="font-bold text-lg">Church Logo</h1>
+            </div>
+            <nav class="space-y-4">
+            <a href="#" class="flex items-center p-2 text-gray-900 bg-gray-100 rounded-lg">
+                <i class="fas fa-tachometer-alt mr-2"></i>
+                <span class="text-sm font-semibold">Dashboard</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                <span class="text-sm">Events</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-users mr-2"></i>
+                <span class="text-sm">People</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-photo-video mr-2"></i>
+                <span class="text-sm">Media</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-wallet mr-2"></i>
+                <span class="text-sm">Finances</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-check-circle mr-2"></i>
+                <span class="text-sm">Check-ins</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-building mr-2"></i>
+                <span class="text-sm">Facilities & Resources</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-chart-line mr-2"></i>
+                <span class="text-sm">Mobile App Analytics</span>
+            </a>
+            </nav>
+
+            <button class="flex fixed bottom-[1px] bg-gray-300 py-3 px-4 w-40 rounded-lg" onclick="openPopupInvite()">
+              <i class="fa fa-user-plus mr-4"></i>
+              <span>Invite</span>
+            </button>
+        </aside>
+
+            <!-- Main Content -->
+        <main class="flex-1 p-8 bg-gray-50 rounded-lg mr-4">
+            <div class="mb-6">
+                <div class="flex justify-between items-center mb-4">
+                  <h1 class="text-2xl font-semibold">Store</h1>
+                  <div class="flex space-x-2">
+                    <button class="flex items-center border px-4 py-2 rounded hover:bg-gray-50">
+                      <i class="fas fa-plus mr-2"></i> Add item
+                    </button>
+                    <button class="border p-2 rounded hover:bg-gray-50">
+                      <i class="fas fa-cog"></i>
+                    </button>
+                  </div>
+                </div>
+            
+                <!-- Tabs -->
+                <div class="flex space-x-4 mb-4">
+                  <a href="#" class="text-sm font-medium border-b-2 border-black pb-2">All</a>
+                  <a href="#" class="text-sm font-medium text-gray-500">Archived Items</a>
+                  <a href="#" class="text-sm font-medium text-gray-500">Deleted Items</a>
+                </div>
+            
+                <!-- Filter Section -->
+                <div class="flex justify-between items-center mb-4">
+                  <div class="text-sm">All (8) <i class="fas fa-ellipsis-h"></i></div>
+                  <div class="flex items-center space-x-4">
+                    <!-- Search -->
+                    <div class="relative">
+                      <input type="text" placeholder="Search store" class="border rounded-lg pl-10 pr-4 py-2 w-72">
+                      <i class="fas fa-search absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                    <!-- Filter Dropdown -->
+                    <div class="relative">
+                      <button class="flex items-center text-sm border rounded-lg py-2 px-4 bg-white hover:bg-gray-50">
+                        Filter by category <i class="fas fa-chevron-down ml-2"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Item Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Store Item -->
+                <div class="bg-white rounded-lg shadow-md p-4 relative">
+                  <img src="https://via.placeholder.com/150" alt="Tote Bag" class="rounded-md mb-4">
+                  <div class="text-sm font-medium mb-1">Tote Bag</div>
+                  <div class="text-sm text-gray-500">Item category / More details</div>
+                  <div class="text-lg font-semibold mt-2">$5</div>
+                  <!-- Options Menu -->
+                  <div class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+            
+                <!-- Repeat for Other Items -->
+                <div class="bg-white rounded-lg shadow-md p-4 relative">
+                  <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4">
+                  <div class="text-sm font-medium mb-1">Journal</div>
+                  <div class="text-sm text-gray-500">Item category / More details</div>
+                  <div class="text-lg font-semibold mt-2">$5</div>
+                  <div class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+            
+                <div class="bg-white rounded-lg shadow-md p-4 relative">
+                  <img src="https://via.placeholder.com/150" alt="Cap" class="rounded-md mb-4">
+                  <div class="text-sm font-medium mb-1">Cap</div>
+                  <div class="text-sm text-gray-500">Item category / More details</div>
+                  <div class="text-lg font-semibold mt-2">$5</div>
+                  <div class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+            
+                <div class="bg-white rounded-lg shadow-md p-4 relative">
+                  <img src="https://via.placeholder.com/150" alt="Shirt" class="rounded-md mb-4">
+                  <div class="text-sm font-medium mb-1">Shirt</div>
+                  <div class="text-sm text-gray-500">Item category / More details</div>
+                  <div class="text-lg font-semibold mt-2">$5</div>
+                  <div class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+            
+                <!-- Repeat for remaining items... -->
+              </div>
+        
+          
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="bg-gray-100 flex justify-center items-cente min-h-screen p-4 w-[20rem]">
+
+            <div class="bg-white shadow-md rounded-md p-6 w-full ">
+                <h2 class="text-xl font-bold mb-4">Upcoming Activities</h2>
+                <div class="mb-4">
+                    <button class="flex items-center justify-between space-x-1 text-gray-500 w-full">
+                        <span>Today, 26 Oct, 2024</span>
+                        <i class="fas fa-calendar-alt"></i>
+                    </button>
+                </div>
+                <hr class="my-4">
+        
+                <!-- Activity Section -->
+                <div class="space-y-6">
+                    <!-- Birthdays -->
+                    <div>
+                        <h3 class="font-semibold text-lg">Birthdays</h3>
+                        <p class="text-gray-600 mb-4">5 people are celebrating birthdays today</p>
+                        <div class="flex space-x-4">
+                            <button class="border rounded-md px-4 py-2 font-semibold hover:bg-gray-100 transition text-sm">
+                                View all
+                            </button>
+                            <button class="bg-green-100 text-green-600 rounded-md px-4 py-2 font-semibold hover:bg-green-200 transition text-sm">
+                                Send message
+                            </button>
+                        </div>
+                    </div>
+                    <hr>
+        
+                    <!-- Anniversaries -->
+                    <div>
+                        <h3 class="font-semibold text-lg">Anniversaries</h3>
+                        <p class="text-gray-600 mb-4">2 families are celebrating wedding anniversaries today.</p>
+                        <div class="flex space-x-4">
+                            <button class="border rounded-md px-4 py-2 font-semibold hover:bg-gray-100 transition text-sm">
+                                View all
+                            </button>
+                            <button class="bg-green-100 text-green-600 rounded-md px-4 py-2 font-semibold hover:bg-green-200 transition text-sm">
+                                Send message
+                            </button>
+                        </div>
+                    </div>
+                    <hr>
+        
+                    <!-- Prayer Rally -->
+                    <div>
+                        <h3 class="font-semibold text-lg">Prayer Rally</h3>
+                        <p class="text-gray-600 mb-4">Some content here describing this activity</p>
+                        <div class="flex space-x-4">
+                            <button class="border rounded-md px-4 py-2 font-semibold hover:bg-gray-100 transition text-sm">
+                                View all
+                            </button>
+                            <button class="bg-green-100 text-green-600 rounded-md px-4 py-2 font-semibold hover:bg-green-200 transition text-sm">
+                                Send message
+                            </button>
+                        </div>
+                    </div>
+
+                     <!-- 3 days fasting -->
+                     <div>
+                        <h3 class="font-semibold text-lg">3 - days Fasting </h3>
+                        <p class="text-gray-600 mb-4">Some content here describing this activity</p>
+                        <div class="flex space-x-4">
+                            <button class="border rounded-md px-4 py-2 font-semibold hover:bg-gray-100 transition text-sm">
+                                View all
+                            </button>
+                            <button class="bg-green-100 text-green-600 rounded-md px-4 py-2 font-semibold hover:bg-green-200 transition text-sm">
+                                Send message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Popup Modal for customised dashboard -->
+        <div id="popupModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+          <!-- Customize Dashboard Modal -->
+          <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6 mt-10 max-h-screen overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-xl font-semibold text-black">Customize Dashboard</h2>
+              <button onclick="closePopup()" class=" text-gray-700 p-2 rounded-full px-4">
+                <span class="text-sm"><i class="fa fa-close font-lg ml-2 text-2xl"></i></span> <!-- Close button -->
+              </button>
+            </div>
+        
+            <!-- Dashboard Options -->
+             <!-- Tabs -->
+            <div class="flex mt-4 space-x-4 border-b border-gray-200">
+                <button class="text-sm font-semibold pb-2 ">People</button>
+                <button class="text-sm text-gray-500 pb-2">Events</button>
+                <button class="text-sm text-gray-500 pb-2">Media</button>
+                <button class="text-sm text-gray-500 pb-2">Finances</button>
+                <button class="text-sm text-gray-500 pb-2">Check-ins</button>
+                <button class="text-sm text-gray-500 pb-2">Mobile app</button>
+                <button class="text-sm text-gray-500 pb-2  border-b-2 border-black">Activities</button>
+            </div>
+
+            <!-- Content -->
+            <div class="mt-6 overflow-y-auto pb-4">
+
+                <!-- Revenue Section -->
+                <div>
+                    <h3 class="font-semibold mb-2">Activities (max 8 options)</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
+                            <input type="checkbox" checked class="form-checkbox h-4 w-4">
+                            <span>Participation Rate</span>
+                        </label>
+
+                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
+                            <input type="checkbox" class="form-checkbox h-4 w-4">
+                            <span>People Breakdown</span>
+                        </label>
+
+                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
+                            <input type="checkbox" checked class="form-checkbox h-4 w-4">
+                            <span>Frequency</span>
+                        </label>
+                        
+                        
+                        <button class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
+                            <i class="fas fa-plus"></i>
+                            <span>Add Option</span>
+                        </button>
+                    </div>
+                </div>
+
+                 <!-- Action Buttons -->
+                 <div class="flex justify-start space-x-4 mt-6">
+                    <button class="bg-gray-300 text-black py-2 px-6 rounded-md" onclick="closePopup()">Cancel</button>
+                    <button class="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600 transition duration-300">
+                    Save
+                    </button>
+                </div>
+            
+            </div>
+          </div>
+        </div>
+
+         <!-- Popup Modal for invite-->
+         <div id="popupModalInvite"  class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative">
+    
+                <!-- Header -->
+                <div class="flex justify-between justify-center items-center mb-4">
+                  <h2 class="text-lg font-semibold">Invite your people</h2>
+
+                  <div class="flex justify-end items-center text-sm text-green-600 mb-0">
+                    <i class="fas fa-link mr-1"></i>
+                    <a href="#" class="hover:underline">Copy link</a>
+                  </div>
+              
+                  <button class="text-gray-400 hover:text-gray-600">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+            
+                <!-- Copy Link -->
+               
+                <!-- Input and Dropdown -->
+                <div class="mb-6">
+                  <label for="invite" class="block text-sm font-medium text-gray-700 mb-1">Invite by email</label>
+                  <div class="flex items-center border border-gray-300 rounded-md">
+                    <input type="text" id="invite" placeholder="Email, comma separated" class="w-full py-2 px-3 text-sm border-none focus:ring-0 focus:outline-none">
+                    <select class="py-2 px-3 bg-transparent text-sm  border-gray-300 focus:outline-none">
+                      <option>
+                        Standard
+                      </option>
+                      <option>Admin</option>
+                    </select>
+                  </div>
+                </div>
+            
+                <!-- Buttons -->
+                <div class="flex justify-end space-x-2">
+                  <button class="px-4 py-2 text-sm text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200">Cancel</button>
+                  <button class="px-4 py-2 text-sm text-white bg-gray-200 rounded-md cursor-not-allowed">Send invite</button>
+                </div>
+              </div>
+         </div>
+
+         <!-- <div id="popupModalInvite"  class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white rounded-lg shadow-lg w-full max-w-xl p-10 relative"> -->
+               <!-- Close Button -->
+               <!-- <button onclick="closePopupInvite()" class="absolute top-3 right-3 bg-red text-black rounded-full p-2">
+                <i class="fa fa-close font-lg"></i>
+              </button> -->
+  
+              <!-- user Button -->
+                <!-- <button class="text-gray-500 mb-4">
+                    <i class="fas fa-user text-[3rem]"></i>
+                </button>
+      
+                <h2 class="text-2xl font-semibold mb-4">Invite your members</h2> -->
+      
+                <!-- URL Input and Dropdown -->
+                <!-- <div class="flex items-center space-x-3 mb-4"> -->
+                    <!-- Input URL -->
+                    <!-- <input type="text" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none" value="https://linktosharewithmembersofthechurch" readonly> -->
+        
+                    <!-- Dropdown -->
+                    <!-- <div class="relative">
+                        <button id="dropdownBtn" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-md border border-gray-300 flex items-center focus:outline-none">
+                            Standard <i class="ml-2 fas fa-chevron-down"></i>
+                        </button> -->
+                        <!-- Dropdown Menu -->
+                        <!-- <div id="dropdownMenu" class="hidden absolute left-0 mt-2 w-32 bg-white rounded-md shadow-lg">
+                            <ul class="text-gray-700">
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Standard</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Check-In</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Member</li>
+                            </ul>
+                        </div>
+                    </div> -->
+        
+                    <!-- Copy Link Button -->
+                    <!-- <button class="bg-green-500 text-white px-4 py-2 rounded-md text-sm">
+                        Copy Link
+                    </button>
+                </div> -->
+        
+                <!-- Email Input -->
+                <!-- <div class="flex items-center space-x-3 mb-4">
+                    <input type="email" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none" placeholder="exampleemail@gmail.com">
+                    <button class="bg-green-500 text-white px-4 py-2 rounded-md">
+                        Invite
+                    </button>
+                </div> -->
+            <!-- </div>
+         </div> -->
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
