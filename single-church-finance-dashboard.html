@@ -132,11 +132,11 @@
         
                 <!-- Navigation -->
                 <div class="flex mt-4 space-x-4 text-gray-500 text-sm border-b pb-2 overflow-x-auto">
-                    <a href="single-church-dashboard.html" class="text-black border-b-2 border-black pb-1 focus:outline-none">People</a>
+                    <a href="single-church-dashboard.html">People</a>
                     <a href="single-church-event-dashboard.html">Events</a>
                     <a href="single-church-media-dashboard.html">Media</a>
-                    <a href="single-church-finance-dashboard.html">Finances</a>
-                    <a href="single-church-checkIn-dashboard.html" >Check-ins</a>
+                    <a href="single-church-finance-dashboard.html" class="text-black border-b-2 border-black pb-1 focus:outline-none">Finances</a>
+                    <a href="single-church-checkIn-dashboard.html">Check-ins</a>
                     <a href="single-church-mobile-app-dashboard.html">Mobile App</a>
                     <a href="single-church-activities-dashboard.html">Activities</a>
                 </div>
@@ -145,15 +145,15 @@
                 <div class="mt-6">
                     <div class="flex justify-between items-center">
                         <div class="flex items-center space-x-2">
-                            <i class="fas fa-user-circle text-3xl"></i>
-                            <h3 class="text-lg font-semibold">People</h3>
+                            <i class="fas fa-file-text text-xl"></i>
+                            <h3 class="text-lg font-semibold">Finances</h3>
                         </div>
                         <div class="flex items-center space-x-4">
-                            <button onclick="openPopup()"  class="text-sm text-gray-500 focus:outline-none">Customize</button>
+                            <button onclick="openPopup()"  class="text-sm text-gray-500 focus:outline-none font-bold">Customize</button>
                             <!-- <button  class="border border-gray-800 px-4 py-1 rounded-md text-sm hover:bg-gray-800 hover:text-white">View people report</button>  -->
                             <div class="relative" x-data="{ open: false }">
                                 <button @click="open = !open" class="bg-white border rounded-md px-4 py-2 font-semibold shadow-md hover:bg-gray-100 transition">
-                                    View People Report
+                                    View Finances Report
                                 </button>
                                 <!-- Dropdown Menu -->
                                 <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-lg overflow-hidden">
@@ -169,18 +169,31 @@
                     </div>
         
                     <!-- Total Members Section -->
+                     <div class="flex items-center space-x-1 text-sm">
+                         <h2>Revenue</h2>
+                         
+                     </div>
                     <div class="mt-6 bg-white p-4 rounded-md shadow-sm border">
                         <div class="flex justify-between items-center mb-4">
                             <div>
-                                <h4 class="text-lg font-semibold">Total Members <i class="fas fa-question-circle text-sm text-gray-400"></i></h4>
-                                <div class="text-3xl font-bold mt-1">2520</div>
-                                <div class="text-red-500 text-sm mt-1">
-                                    <i class="fas fa-arrow-down"></i> 0.5%
+                                <h4 class="text-lg font-semibold cursor-pointer">
+                                    Total Revenues
+                                    <i class="fas fa-question-circle text-sm text-gray-400"></i>
+                                </h4>
+
+                                <div class="text-3xl font-bold mt-1">12520</div>
+                                <div class="text-green-500 text-sm mt-1">
+                                    <i class="fas fa-arrow-up"></i> 0.5%
                                 </div>
                             </div>
                             <div class="text-gray-500 text-sm">
                                 <select name="" id="">
-                                    <option value="">Last 12 months</option>
+                                    <option value="">Custom</option>
+                                    <option value="">Last 7 days</option>
+                                    <option value="">Last 14 days</option>
+                                    <option value="" selected>Last 3 months</option>
+                                    <option value="" >Last 6 months</option>
+                                    <option value="" >Last 12 months</option>
                                 </select>
                             </div>
                         </div>
@@ -191,19 +204,35 @@
                         
                     </div>
 
-                      <!-- Total Group Section -->
+                      <!-- Expenses Section -->
+                      <div class="flex items-center space-x-1 text-sm mt-4">
+                        <h2>Expenses</h2>
+                        
+                      </div>
                       <div class="mt-6 bg-white p-4 rounded-md shadow-sm border">
                         <div class="flex justify-between items-center mb-4">
                             <div>
-                                <h4 class="text-lg font-semibold">Total Groups <i class="fas fa-question-circle text-sm text-gray-400"></i></h4>
-                                <div class="text-3xl font-bold mt-1">20</div>
-                                <div class="text-red-500 text-sm mt-1">
-                                    <i class="fas fa-arrow-down"></i> 0.5%
+                                <div>
+                                    <h4 class="text-lg font-semibold ">
+                                        Total Expenses
+                                        <i class="fas fa-question-circle text-sm text-gray-400"></i>
+                                    </h4>
+    
+                                    <div class="text-3xl font-bold mt-1">4000</div>
+                                    <div class="text-green-500 text-sm mt-1">
+                                        <i class="fas fa-arrow-up"></i> 0.5%
+                                    </div>
                                 </div>
+                                
                             </div>
                             <div class="text-gray-500 text-sm">
                                 <select name="" id="">
-                                    <option value="">Last 12 months</option>
+                                    <option value="">Custom</option>
+                                    <option value="" selected>Last 7 days</option>
+                                    <option value="">Last 14 days</option>
+                                    <option value="" >Last 3 months</option>
+                                    <option value="" >Last 6 months</option>
+                                    <option value="" >Last 12 months</option>
                                 </select>
                             </div>
                         </div>
@@ -309,10 +338,10 @@
             <!-- Dashboard Options -->
              <!-- Tabs -->
             <div class="flex mt-4 space-x-4 border-b border-gray-200">
-                <button class="text-sm font-semibold pb-2 border-b-2 border-black">People</button>
+                <button class="text-sm font-semibold pb-2 ">People</button>
                 <button class="text-sm text-gray-500 pb-2">Events</button>
                 <button class="text-sm text-gray-500 pb-2">Media</button>
-                <button class="text-sm text-gray-500 pb-2">Finances</button>
+                <button class="text-sm text-gray-500 pb-2  border-b-2 border-black">Finances</button>
                 <button class="text-sm text-gray-500 pb-2">Check-ins</button>
                 <button class="text-sm text-gray-500 pb-2">Mobile app</button>
                 <button class="text-sm text-gray-500 pb-2">Activities</button>
@@ -321,127 +350,75 @@
             <!-- Content -->
             <div class="mt-6 overflow-y-auto pb-4">
 
-                <!-- Members Section -->
+                <!-- Revenue Section -->
                 <div>
-                    <h3 class="font-semibold mb-2">Members (max 8 options)</h3>
+                    <h3 class="font-semibold mb-2">Revenue (max 8 options)</h3>
                     <div class="flex flex-wrap gap-4">
                         <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
                             <input type="checkbox" checked class="form-checkbox h-4 w-4">
-                            <span>Total Members</span>
+                            <span>Total Revenue</span>
                         </label>
                         <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
                             <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Members Added</span>
+                            <span>Physical Offering</span>
                         </label>
                         <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
                             <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Active Members</span>
+                            <span>Online Offering</span>
                         </label>
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>New Members</span>
-                        </label>
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Inactive Members</span>
-                        </label>
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Suspended Members</span>
-                        </label>
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Paused Members</span>
-                        </label>
-                        <button class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <i class="fas fa-plus"></i>
-                            <span>Add Option</span>
-                        </button>
-                    </div>
-                </div>
 
-                <!-- Groups Section -->
-                <div class="mt-6">
-                    <h3 class="font-semibold mb-2">Groups (max 8 options)</h3>
-                    <div class="flex flex-wrap gap-4">
                         <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" checked class="form-checkbox h-4 w-4">
-                            <span>Total Groups</span>
+                            <input type="checkbox" class="form-checkbox h-4 w-4">
+                            <span>Physical Tithe</span>
                         </label>
                         <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
                             <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Active Group Members</span>
+                            <span>Online Tithe</span>
                         </label>
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Inactive Group Members</span>
-                        </label>
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>New Groups</span>
-                        </label>
-                        <button class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <i class="fas fa-plus"></i>
-                            <span>Add Option</span>
-                        </button>
-                    </div>
-                </div>
 
-                <!-- Families Section -->
-                <div class="mt-6">
-                    <h3 class="font-semibold mb-2">Families (max 8 options)</h3>
-                    <div class="flex flex-wrap gap-4">
                         <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
                             <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Total Families</span>
+                            <span>Special Contribution</span>
                         </label>
                         <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
                             <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Active Families</span>
-                        </label>
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Inactive Families</span>
-                        </label>
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>New Families</span>
-                        </label>
-                        <button class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <i class="fas fa-plus"></i>
-                            <span>Add Option</span>
-                        </button>
-                    </div>
-                </div>
-
-                 <!-- Anniversaries Section -->
-                 <div class="mt-6">
-                    <h3 class="font-semibold mb-2">Families (max 8 options)</h3>
-                    <div class="flex flex-wrap gap-4">
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Total Birthdays</span>
-                        </label>
-                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
-                            <input type="checkbox" class="form-checkbox h-4 w-4">
-                            <span>Total Wedding Anniversaries</span>
+                            <span>Total Funds</span>
                         </label>
                         
                         <button class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
                             <i class="fas fa-plus"></i>
                             <span>Add Option</span>
                         </button>
-
                     </div>
-                     <!-- Action Buttons -->
-                     <div class="flex justify-start space-x-4 mt-6">
-                        <button class="bg-gray-300 text-black py-2 px-6 rounded-md" onclick="closePopup()">Cancel</button>
-                        <button class="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600 transition duration-300">
-                        Save
+                </div>
+
+                <!-- Expenses Section -->
+                <div class="mt-6">
+                    <h3 class="font-semibold mb-2">Expenses (max 8 options)</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
+                            <input type="checkbox" checked class="form-checkbox h-4 w-4">
+                            <span>Total Expenses</span>
+                        </label>
+                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
+                            <input type="checkbox" class="form-checkbox h-4 w-4">
+                            <span>Expenses Breakdown</span>
+                        </label>
+                        
+                        <button class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
+                            <i class="fas fa-plus"></i>
+                            <span>Add Option</span>
                         </button>
                     </div>
                 </div>
 
+                 <!-- Action Buttons -->
+                 <div class="flex justify-start space-x-4 mt-6">
+                    <button class="bg-gray-300 text-black py-2 px-6 rounded-md" onclick="closePopup()">Cancel</button>
+                    <button class="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600 transition duration-300">
+                    Save
+                    </button>
+                </div>
             
             </div>
           </div>
