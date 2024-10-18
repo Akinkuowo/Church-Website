@@ -145,12 +145,25 @@
             
                 <!-- Filter Section -->
                 <div class="flex justify-between items-center mb-4">
-                  <div class="text-sm">All (8) <i class="fas fa-ellipsis-h"></i></div>
+                  <div class="text-sm" x-data="{ open: false }">
+                    All (8) 
+                    <i class="fas fa-ellipsis-v cursor-pointer"  @click="open = !open" ></i>
+
+                    <div x-show="open" @click.away="open = false" class="absolute left-[21rem] top-[8rem] mt-2 w-40 bg-white border rounded-md shadow-lg overflow-hidden">
+                        <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition">
+                            <i class="fas fa-archive mr-2"></i> Archive All
+                        </button>
+                        <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition">
+                            <i class="fas fa-trash mr-2"></i> Delete All
+                        </button>
+                    </div>
+                  </div>
                   <div class="flex items-center space-x-4">
                     <!-- Search -->
                     <div class="relative">
                       <input type="text" placeholder="Search store" class="border rounded-lg pl-10 pr-4 py-2 w-72">
                       <i class="fas fa-search absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400"></i>
+
                     </div>
                     <!-- Filter Dropdown -->
                     <div class="relative">
@@ -166,128 +179,123 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Store Item -->
                 <div class="bg-white rounded-lg shadow-md p-4 relative">
-                  <img src="https://via.placeholder.com/150" alt="Tote Bag" class="rounded-md mb-4">
-                  <div class="text-sm font-medium mb-1">Tote Bag</div>
-                  <div class="text-sm text-gray-500">Item category / More details</div>
-                  <div class="text-lg font-semibold mt-2">$5</div>
-                  <!-- Options Menu -->
-                  <div class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
-                    <i class="fas fa-ellipsis-v"></i>
+                    <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm font-medium mb-1">Tote Bag</div>
+                        <div class=" text-gray-500 hover:text-gray-700">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-500">Item category / More details</div>
+                    <div class="text-sm font-semibold mt-2">$5</div>
+                    
                   </div>
-                </div>
             
-                <!-- Repeat for Other Items -->
+   
                 <div class="bg-white rounded-lg shadow-md p-4 relative">
-                  <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4">
-                  <div class="text-sm font-medium mb-1">Journal</div>
-                  <div class="text-sm text-gray-500">Item category / More details</div>
-                  <div class="text-lg font-semibold mt-2">$5</div>
-                  <div class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
-                    <i class="fas fa-ellipsis-v"></i>
+                  <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
+                  
+                  <div class="flex justify-between items-center">
+                      <div class="text-sm font-medium mb-1">Journal</div>
+                      <div class=" text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </div>
                   </div>
-                </div>
-            
-                <div class="bg-white rounded-lg shadow-md p-4 relative">
-                  <img src="https://via.placeholder.com/150" alt="Cap" class="rounded-md mb-4">
-                  <div class="text-sm font-medium mb-1">Cap</div>
-                  <div class="text-sm text-gray-500">Item category / More details</div>
-                  <div class="text-lg font-semibold mt-2">$5</div>
-                  <div class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </div>
+                  <div class="text-xs text-gray-500">Item category / More details</div>
+                  <div class="text-sm font-semibold mt-2">$5</div>
+                  
                 </div>
             
                 <div class="bg-white rounded-lg shadow-md p-4 relative">
-                  <img src="https://via.placeholder.com/150" alt="Shirt" class="rounded-md mb-4">
-                  <div class="text-sm font-medium mb-1">Shirt</div>
-                  <div class="text-sm text-gray-500">Item category / More details</div>
-                  <div class="text-lg font-semibold mt-2">$5</div>
-                  <div class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </div>
+                    <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm font-medium mb-1">Cap</div>
+                        <div class=" text-gray-500 hover:text-gray-700">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-500">Item category / More details</div>
+                    <div class="text-sm font-semibold mt-2">$5</div>
+                    
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-4 relative">
+                <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
+                
+                <div class="flex justify-between items-center">
+                    <div class="text-sm font-medium mb-1">Shirt</div>
+                    <div class=" text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <div class="text-xs text-gray-500">Item category / More details</div>
+                <div class="text-sm font-semibold mt-2">$5</div>
+                
                 </div>
             
-                <!-- Repeat for remaining items... -->
+                <div class="bg-white rounded-lg shadow-md p-4 relative">
+                    <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm font-medium mb-1">Colored Journal</div>
+                        <div class=" text-gray-500 hover:text-gray-700">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-500">Item category / More details</div>
+                    <div class="text-sm font-semibold mt-2">$5</div>
+                    
+                  </div>
+
+                  <div class="bg-white rounded-lg shadow-md p-4 relative">
+                    <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm font-medium mb-1">Note Pad</div>
+                        <div class=" text-gray-500 hover:text-gray-700">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-500">Item category / More details</div>
+                    <div class="text-sm font-semibold mt-2">$5</div>
+                    
+                  </div>
+
+                  <div class="bg-white rounded-lg shadow-md p-4 relative">
+                    <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm font-medium mb-1">Bag</div>
+                        <div class=" text-gray-500 hover:text-gray-700">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-500">Item category / More details</div>
+                    <div class="text-sm font-semibold mt-2">$5</div>
+                    
+                  </div>
+
+                  <div class="bg-white rounded-lg shadow-md p-4 relative">
+                    <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm font-medium mb-1">Jotters</div>
+                        <div class=" text-gray-500 hover:text-gray-700">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-500">Item category / More details</div>
+                    <div class="text-sm font-semibold mt-2">$5</div>
+                    
+                  </div>
+    
               </div>
         
           
         </main>
 
-        <!-- Right Sidebar -->
-        <aside class="bg-gray-100 flex justify-center items-cente min-h-screen p-4 w-[20rem]">
-
-            <div class="bg-white shadow-md rounded-md p-6 w-full ">
-                <h2 class="text-xl font-bold mb-4">Upcoming Activities</h2>
-                <div class="mb-4">
-                    <button class="flex items-center justify-between space-x-1 text-gray-500 w-full">
-                        <span>Today, 26 Oct, 2024</span>
-                        <i class="fas fa-calendar-alt"></i>
-                    </button>
-                </div>
-                <hr class="my-4">
-        
-                <!-- Activity Section -->
-                <div class="space-y-6">
-                    <!-- Birthdays -->
-                    <div>
-                        <h3 class="font-semibold text-lg">Birthdays</h3>
-                        <p class="text-gray-600 mb-4">5 people are celebrating birthdays today</p>
-                        <div class="flex space-x-4">
-                            <button class="border rounded-md px-4 py-2 font-semibold hover:bg-gray-100 transition text-sm">
-                                View all
-                            </button>
-                            <button class="bg-green-100 text-green-600 rounded-md px-4 py-2 font-semibold hover:bg-green-200 transition text-sm">
-                                Send message
-                            </button>
-                        </div>
-                    </div>
-                    <hr>
-        
-                    <!-- Anniversaries -->
-                    <div>
-                        <h3 class="font-semibold text-lg">Anniversaries</h3>
-                        <p class="text-gray-600 mb-4">2 families are celebrating wedding anniversaries today.</p>
-                        <div class="flex space-x-4">
-                            <button class="border rounded-md px-4 py-2 font-semibold hover:bg-gray-100 transition text-sm">
-                                View all
-                            </button>
-                            <button class="bg-green-100 text-green-600 rounded-md px-4 py-2 font-semibold hover:bg-green-200 transition text-sm">
-                                Send message
-                            </button>
-                        </div>
-                    </div>
-                    <hr>
-        
-                    <!-- Prayer Rally -->
-                    <div>
-                        <h3 class="font-semibold text-lg">Prayer Rally</h3>
-                        <p class="text-gray-600 mb-4">Some content here describing this activity</p>
-                        <div class="flex space-x-4">
-                            <button class="border rounded-md px-4 py-2 font-semibold hover:bg-gray-100 transition text-sm">
-                                View all
-                            </button>
-                            <button class="bg-green-100 text-green-600 rounded-md px-4 py-2 font-semibold hover:bg-green-200 transition text-sm">
-                                Send message
-                            </button>
-                        </div>
-                    </div>
-
-                     <!-- 3 days fasting -->
-                     <div>
-                        <h3 class="font-semibold text-lg">3 - days Fasting </h3>
-                        <p class="text-gray-600 mb-4">Some content here describing this activity</p>
-                        <div class="flex space-x-4">
-                            <button class="border rounded-md px-4 py-2 font-semibold hover:bg-gray-100 transition text-sm">
-                                View all
-                            </button>
-                            <button class="bg-green-100 text-green-600 rounded-md px-4 py-2 font-semibold hover:bg-green-200 transition text-sm">
-                                Send message
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
 
         <!-- Popup Modal for customised dashboard -->
         <div id="popupModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
