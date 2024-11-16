@@ -17,7 +17,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/script.js"></script>
  
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -128,7 +127,7 @@
                 <div class="flex justify-between items-center mb-4">
                   <h1 class="text-2xl font-semibold">Store</h1>
                   <div class="flex space-x-2">
-                    <button onclick="openPopupModalAddItem()" class="flex items-center border px-4 py-2 rounded hover:bg-gray-50">
+                    <button class="flex items-center border px-4 py-2 rounded hover:bg-gray-50">
                       <i class="fas fa-plus mr-2"></i> Add item
                     </button>
                     <button class="border p-2 rounded hover:bg-gray-50">
@@ -139,26 +138,23 @@
             
                 <!-- Tabs -->
                 <div class="flex space-x-4 mb-4">
-                  <a href="store.html" class="text-sm font-medium border-b-2 border-black pb-2">All</a>
-                  <a href="archived-items.html" class="text-sm font-medium text-gray-500">Archived Items</a>
+                  <a href="store.html" class="text-sm font-medium text-gray-500">All</a>
+                  <a href="archived-items.html" class=" text-sm font-medium border-b-2 border-black pb-2">Archived Items</a>
                   <a href="deleted-items.html" class="text-sm font-medium text-gray-500">Deleted Items</a>
                 </div>
             
                 <!-- Filter Section -->
                 <div class="flex justify-between items-center mb-4">
                   <div class="text-sm" x-data="{ open: false }">
-                    All (8) 
+                    Archived Items 
                     <i class="fas fa-ellipsis-v cursor-pointer"  @click="open = !open" ></i>
 
-                    <div x-show="open"
-                     
-                     @click.away="open = false" 
-                     class="">
+                    <div x-show="open" @click.away="open = false" class="absolute left-[21rem] top-[8rem] mt-2 w-60 bg-white border rounded-md shadow-lg overflow-hidden">
                         <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition">
-                            <i class="fas fa-archive mr-2"></i> Archive All
+                            <i class="fas fa-archive mr-2"></i> Unarchive All
                         </button>
                         <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition">
-                            <i class="fas fa-trash mr-2"></i> Delete All
+                            <i class="fas fa-trash mr-2"></i> Delete All Immediately
                         </button>
                     </div>
                   </div>
@@ -170,19 +166,18 @@
 
                     </div>
                     <!-- Filter Dropdown -->
-                    <div class="relative">
-                      <!-- <button class="flex items-center text-sm border rounded-lg py-2 px-4 bg-white hover:bg-gray-50">
-                        Filter by category <i class="fas fa-chevron-down ml-2"></i>
-                      </button> -->
+                    <!-- <div class="relative">
+                     
                       <select name="" class="flex items-center text-sm border rounded-lg py-2 px-4 bg-white hover:bg-gray-50">
                         <option value="">Filter by category </option>
                         <option value="">Category One</option>
                         <option value="">Category Two</option>
                         <option value="">Category Three</option>
                       </select>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
+                <p class="text-sm">Items that have been archieved can be restored</p>
               </div>
             
               <!-- Item Grid -->
@@ -196,14 +191,7 @@
                         <div class=" text-gray-500 hover:text-gray-700">
                           <i class="fas fa-ellipsis-v cursor-pointer"  @click="open = !open"></i>
 
-                          <div x-show="open"
-                              x-transition:enter="transition ease-out duration-100"
-                              x-transition:enter-start="transform opacity-0 scale-95"
-                              x-transition:enter-end="transform opacity-100 scale-100"
-                              x-transition:leave="transition ease-in duration-75"
-                              x-transition:leave-start="transform opacity-100 scale-100"
-                              x-transition:leave-end="transform opacity-0 scale-95"
-                              @click.away="open = false" class="">
+                          <div x-show="open" @click.away="open = false" class="absolute left-[21rem] mt-2 w-40 bg-white border rounded-md shadow-lg overflow-hidden">
                               <button class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition">
                                   <i class="fas fa-archive mr-2"></i> Archive All
                               </button>
@@ -233,95 +221,77 @@
                   
                 </div>
             
-                <div class="bg-white rounded-lg shadow-md p-4 relative">
-                    <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
-                    
-                    <div class="flex justify-between items-center">
-                        <div class="text-sm font-medium mb-1">Cap</div>
-                        <div class=" text-gray-500 hover:text-gray-700">
-                          <i class="fas fa-ellipsis-v"></i>
-                        </div>
-                    </div>
-                    <div class="text-xs text-gray-500">Item category / More details</div>
-                    <div class="text-sm font-semibold mt-2">$5</div>
-                    
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-md p-4 relative">
-                <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
-                
-                <div class="flex justify-between items-center">
-                    <div class="text-sm font-medium mb-1">Shirt</div>
-                    <div class=" text-gray-500 hover:text-gray-700">
-                        <i class="fas fa-ellipsis-v"></i>
-                    </div>
-                </div>
-                <div class="text-xs text-gray-500">Item category / More details</div>
-                <div class="text-sm font-semibold mt-2">$5</div>
-                
-                </div>
-            
-                <div class="bg-white rounded-lg shadow-md p-4 relative">
-                    <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
-                    
-                    <div class="flex justify-between items-center">
-                        <div class="text-sm font-medium mb-1">Colored Journal</div>
-                        <div class=" text-gray-500 hover:text-gray-700">
-                          <i class="fas fa-ellipsis-v"></i>
-                        </div>
-                    </div>
-                    <div class="text-xs text-gray-500">Item category / More details</div>
-                    <div class="text-sm font-semibold mt-2">$5</div>
-                    
-                  </div>
-
-                  <div class="bg-white rounded-lg shadow-md p-4 relative">
-                    <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
-                    
-                    <div class="flex justify-between items-center">
-                        <div class="text-sm font-medium mb-1">Note Pad</div>
-                        <div class=" text-gray-500 hover:text-gray-700">
-                          <i class="fas fa-ellipsis-v"></i>
-                        </div>
-                    </div>
-                    <div class="text-xs text-gray-500">Item category / More details</div>
-                    <div class="text-sm font-semibold mt-2">$5</div>
-                    
-                  </div>
-
-                  <div class="bg-white rounded-lg shadow-md p-4 relative">
-                    <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
-                    
-                    <div class="flex justify-between items-center">
-                        <div class="text-sm font-medium mb-1">Bag</div>
-                        <div class=" text-gray-500 hover:text-gray-700">
-                          <i class="fas fa-ellipsis-v"></i>
-                        </div>
-                    </div>
-                    <div class="text-xs text-gray-500">Item category / More details</div>
-                    <div class="text-sm font-semibold mt-2">$5</div>
-                    
-                  </div>
-
-                  <div class="bg-white rounded-lg shadow-md p-4 relative">
-                    <img src="https://via.placeholder.com/150" alt="Journal" class="rounded-md mb-4 mx-auto">
-                    
-                    <div class="flex justify-between items-center">
-                        <div class="text-sm font-medium mb-1">Jotters</div>
-                        <div class=" text-gray-500 hover:text-gray-700">
-                          <i class="fas fa-ellipsis-v"></i>
-                        </div>
-                    </div>
-                    <div class="text-xs text-gray-500">Item category / More details</div>
-                    <div class="text-sm font-semibold mt-2">$5</div>
-                    
-                  </div>
     
               </div>
         
           
         </main>
 
+
+        <!-- Popup Modal for customised dashboard -->
+        <div id="popupModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+          <!-- Customize Dashboard Modal -->
+          <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6 mt-10 max-h-screen overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-xl font-semibold text-black">Customize Dashboard</h2>
+              <button onclick="closePopup()" class=" text-gray-700 p-2 rounded-full px-4">
+                <span class="text-sm"><i class="fa fa-close font-lg ml-2 text-2xl"></i></span> <!-- Close button -->
+              </button>
+            </div>
+        
+            <!-- Dashboard Options -->
+             <!-- Tabs -->
+            <div class="flex mt-4 space-x-4 border-b border-gray-200">
+                <button class="text-sm font-semibold pb-2 ">People</button>
+                <button class="text-sm text-gray-500 pb-2">Events</button>
+                <button class="text-sm text-gray-500 pb-2">Media</button>
+                <button class="text-sm text-gray-500 pb-2">Finances</button>
+                <button class="text-sm text-gray-500 pb-2">Check-ins</button>
+                <button class="text-sm text-gray-500 pb-2">Mobile app</button>
+                <button class="text-sm text-gray-500 pb-2  border-b-2 border-black">Activities</button>
+            </div>
+
+            <!-- Content -->
+            <div class="mt-6 overflow-y-auto pb-4">
+
+                <!-- Revenue Section -->
+                <div>
+                    <h3 class="font-semibold mb-2">Activities (max 8 options)</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
+                            <input type="checkbox" checked class="form-checkbox h-4 w-4">
+                            <span>Participation Rate</span>
+                        </label>
+
+                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
+                            <input type="checkbox" class="form-checkbox h-4 w-4">
+                            <span>People Breakdown</span>
+                        </label>
+
+                        <label class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
+                            <input type="checkbox" checked class="form-checkbox h-4 w-4">
+                            <span>Frequency</span>
+                        </label>
+                        
+                        
+                        <button class="border border-gray-300 rounded-md py-2 px-4 flex items-center space-x-2">
+                            <i class="fas fa-plus"></i>
+                            <span>Add Option</span>
+                        </button>
+                    </div>
+                </div>
+
+                 <!-- Action Buttons -->
+                 <div class="flex justify-start space-x-4 mt-6">
+                    <button class="bg-gray-300 text-black py-2 px-6 rounded-md" onclick="closePopup()">Cancel</button>
+                    <button class="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600 transition duration-300">
+                    Save
+                    </button>
+                </div>
+            
+            </div>
+          </div>
+        </div>
 
          <!-- Popup Modal for invite-->
          <div id="popupModalInvite"  class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
@@ -363,85 +333,62 @@
                   <button class="px-4 py-2 text-sm text-white bg-gray-200 rounded-md cursor-not-allowed">Send invite</button>
                 </div>
               </div>
-            </div>
+         </div>
 
-          <!-- Modal Container -->
-          <div id="popupModalAddItem" class="absolute top-0 left-0 w-full min-h-screen bg-gray-500 bg-opacity-50 flex justify-center items-start hidden overflow-y-auto">
-            <div class="bg-white w-full max-w-lg p-6 mt-16 mb-16 rounded-lg shadow-lg relative">
-                <!-- Modal Header -->
-                <div class="flex justify-between items-center pb-4 border-b border-gray-200">
-                    <h2 class="text-xl font-semibold">Add item to store</h2>
-                    <button class="text-gray-400 hover:text-gray-600" onclick="closePopupModalAddItem()">
-                        <i class="fas fa-times"></i>
+         <!-- <div id="popupModalInvite"  class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white rounded-lg shadow-lg w-full max-w-xl p-10 relative"> -->
+               <!-- Close Button -->
+               <!-- <button onclick="closePopupInvite()" class="absolute top-3 right-3 bg-red text-black rounded-full p-2">
+                <i class="fa fa-close font-lg"></i>
+              </button> -->
+  
+              <!-- user Button -->
+                <!-- <button class="text-gray-500 mb-4">
+                    <i class="fas fa-user text-[3rem]"></i>
+                </button>
+      
+                <h2 class="text-2xl font-semibold mb-4">Invite your members</h2> -->
+      
+                <!-- URL Input and Dropdown -->
+                <!-- <div class="flex items-center space-x-3 mb-4"> -->
+                    <!-- Input URL -->
+                    <!-- <input type="text" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none" value="https://linktosharewithmembersofthechurch" readonly> -->
+        
+                    <!-- Dropdown -->
+                    <!-- <div class="relative">
+                        <button id="dropdownBtn" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-md border border-gray-300 flex items-center focus:outline-none">
+                            Standard <i class="ml-2 fas fa-chevron-down"></i>
+                        </button> -->
+                        <!-- Dropdown Menu -->
+                        <!-- <div id="dropdownMenu" class="hidden absolute left-0 mt-2 w-32 bg-white rounded-md shadow-lg">
+                            <ul class="text-gray-700">
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Standard</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Check-In</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Member</li>
+                            </ul>
+                        </div>
+                    </div> -->
+        
+                    <!-- Copy Link Button -->
+                    <!-- <button class="bg-green-500 text-white px-4 py-2 rounded-md text-sm">
+                        Copy Link
                     </button>
-                </div>
+                </div> -->
         
-                <!-- File Upload Section -->
-                <div class="mt-6 mb-4 flex justify-center items-center border-2 border-dashed border-gray-300 rounded-lg p-4 cursor-pointer" onclick="triggerFileInput()">
-                  <div class="text-center">
-                      <i class="fas fa-plus text-3xl text-gray-400"></i>
-                      <p class="text-sm text-gray-500 mt-2">Add an image or drag and drop it here</p>
-                      <p class="text-sm text-gray-400">5mb max file size</p>
-                  </div>
-                  <!-- Hidden File Input -->
-                  <input type="file" id="fileInput" class="hidden" onchange="handleFileUpload(event)">
-              </div>
-        
-                <!-- Form Fields -->
-                <form>
-                    <!-- Item Name -->
-                    <div class="mb-4">
-                        <label class="block text-gray-700">Item name</label>
-                        <input type="text" placeholder="Item name" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-        
-                    <!-- Category Select -->
-                    <div class="mb-4">
-                        <label class="block text-gray-700">Category</label>
-                        <select class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <option>Select</option>
-                            <option>Category One</option>
-                            <option>Category Two</option>
-                            <option>Category Three</option>
-                            <!-- Add categories here -->
-                        </select>
-                    </div>
-        
-                    <!-- Item Price -->
-                    <div class="mb-4">
-                        <label class="block text-gray-700">Item price</label>
-                        <input type="text" placeholder="Item price" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-        
-                    <!-- More Details -->
-                    <div class="mb-4">
-                        <label class="block text-gray-700">More details</label>
-                        <input type="text" placeholder="Details (max 80 characters)" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-        
-                    <!-- Purchase Link -->
-                    <div class="mb-4">
-                        <label class="block text-gray-700">Purchase link</label>
-                        <input type="text" placeholder="Add link here" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-        
-                    <!-- Action Buttons -->
-                    <div class="flex justify-end space-x-2 mt-6">
-                        <button type="button" onclick="closePopupModalAddItem()" class="px-4 py-2 text-gray-700 border border-gray-300 rounded-md hover:bg-gray-100">Cancel</button>
-                        <button type="submit" class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600">Add item</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        
-
+                <!-- Email Input -->
+                <!-- <div class="flex items-center space-x-3 mb-4">
+                    <input type="email" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none" placeholder="exampleemail@gmail.com">
+                    <button class="bg-green-500 text-white px-4 py-2 rounded-md">
+                        Invite
+                    </button>
+                </div> -->
+            <!-- </div>
+         </div> -->
 
 
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.min.js"></script>
     <script src="js/script.js"></script>
-   
-
 </body>
 </html>
