@@ -385,7 +385,7 @@
                   </div>
                   <!-- Hidden File Input -->
                   <input type="file" id="fileInput" class="hidden" onchange="handleFileUpload(event)">
-              </div>
+                </div>
         
                 <!-- Form Fields -->
                 <form>
@@ -438,6 +438,24 @@
 
 
     </div>
+
+    <script>
+      // Trigger the file input dialog when the container is clicked
+      function triggerFileInput() {
+        document.getElementById("fileInput").click();
+      }
+    
+      // Handle the file upload when a file is selected
+      function handleFileUpload(event) {
+        const file = event.target.files[0]; // Get the selected file
+        if (file) {
+          console.log("File selected:", file.name);
+          // Additional logic for file handling (e.g., upload the file to a server)
+        } else {
+          console.log("No file selected");
+        }
+      }
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.min.js"></script>
     <script src="js/script.js"></script>
