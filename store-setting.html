@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store Settings</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons for the buttons -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+ 
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="">
+        <!-- Top Menu -->
+    <div class="w-full bg-white py-3 shadow-sm">
+        <div class="container mx-auto flex items-center justify-between px-4">
+        
+        <!-- Left Section (Logo and Welcome Text) -->
+        <div class="flex items-center space-x-6">
+            <!-- Logo -->
+            <h1 class="font-bold text-xl text-black">thechurchedapp</h1>
+            
+         
+           
+        </div>
+        
+        <!-- Middle Section (Search Bar) -->
+        <div class="flex items-center space-x-20">
+             <!-- Welcome Text -->
+            <h2 class="text-xl font-semibold text-black ml-20">Welcome Jane!</h2>
+            
+            <!-- <i class="fas fa-search relative left-2 top-3 text-gray-400"></i> -->
+            <input
+            type="text"
+            placeholder="What would you like to find?"
+            class="search-box bg-gray-100 text-gray-700 rounded-full py-2 px-4 pl-10 w-80 focus:outline-none"
+            />
+        </div>
+
+            <!-- Right Section (Icons and Profile Image) -->
+            <div class="flex items-center h-12">
+                <!-- Circle Icon Buttons with Borders -->
+            
+                <!-- First Icon -->
+                <div class="flex items-center justify-center h-full border-r-2 border-gray-300 px-2">
+                <button class="icon-circle">
+                    <i class="fas fa-table text-green-500"></i>
+                </button>
+                </div>
+            
+                <!-- Second Icon with Dropdown -->
+                <div class="flex items-center justify-center h-full border-r-2 border-gray-300 px-2">
+                    <button id="dropdownToggle" class="p-3 text-xl focus:outline-none">
+                        <i class="fas fa-globe text-gray-400"></i>
+                    </button>
+            
+                <!-- Dropdown Menu -->
+                <div id="dropdownMenu" class="absolute right-0 top-12 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-md hidden">
+                    <ul class="py-1">
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">English</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Español</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            
+                <!-- Third Icon -->
+                <div class="flex items-center justify-center h-full border-r-2 border-gray-300 pr-3">
+                <button class="icon-circle">
+                    <i class="fas fa-question text-gray-500"></i>
+                </button>
+                </div>
+            
+                <!-- Fourth Icon -->
+                <div class="flex items-center justify-center h-full border-r-2 border-gray-300 pr-3">
+                <button class="icon-circle">
+                    <i class="fas fa-bell text-gray-500"></i>
+                </button>
+                </div>
+            
+                <!-- User Profile -->
+                <div class="flex items-center justify-center h-full pl-3">
+                <img
+                    src="https://via.placeholder.com/40"
+                    alt="User Avatar"
+                    class="w-10 h-10 rounded-full border-2 border-gray-200 shadow"
+                />
+                </div>
+            </div>
+  
+        </div>
+    </div>
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-50 rounded-lg border-gray-200 p-4 mr-4">
+            <div class="mb-8">
+                <h1 class="font-bold text-lg">Church Logo</h1>
+            </div>
+            <nav class="space-y-4">
+            <a href="#" class="flex items-center p-2 text-gray-900 bg-gray-100 rounded-lg">
+                <i class="fas fa-tachometer-alt mr-2"></i>
+                <span class="text-sm font-semibold">Dashboard</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                <span class="text-sm">Events</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-users mr-2"></i>
+                <span class="text-sm">People</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-photo-video mr-2"></i>
+                <span class="text-sm">Media</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-wallet mr-2"></i>
+                <span class="text-sm">Finances</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-check-circle mr-2"></i>
+                <span class="text-sm">Check-ins</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-building mr-2"></i>
+                <span class="text-sm">Facilities & Resources</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-chart-line mr-2"></i>
+                <span class="text-sm">Mobile App Analytics</span>
+            </a>
+            </nav>
+
+            <button class="flex fixed bottom-[1px] bg-gray-300 py-3 px-4 w-40 rounded-lg" onclick="openPopupInvite()">
+              <i class="fa fa-user-plus mr-4"></i>
+              <span>Invite</span>
+            </button>
+        </aside>
+
+            <!-- Main Content -->
+            <main class="flex-1 p-8 bg-gray-50 rounded-lg mr-4">
+                <div class="mb-6">
+                    <div class="">
+                      <h1 class="text-2xl font-semibold">Store /<span class="text-green-500 "> Settings</span> </h1>
+                      <h2 class="mt-4 text-xl font-semibold text-gray-800">Category Settings</h2>
+                      <p class="text-sm text-gray-600 mb-6">Add all the categories of items in your store. You can add up to 8.</p>
+                    </div>
+                </div>
+
+                  <!-- Dynamic Category List -->
+                  <div class="space-y-4">
+                    <!-- Existing Categories -->
+                    <div class="flex flex-wrap gap-4">
+                      <!-- Category Item -->
+                      <div class="w-[48%] flex items-center justify-between bg-gray-100 border border-gray-300 rounded-lg px-4 py-2">
+                        <span class="text-gray-800 text-sm">Books</span>
+                        <button class="ml-2 text-gray-400 hover:text-red-500">
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                      <div class="w-[48%] flex items-center justify-between bg-gray-100 border border-gray-300 rounded-lg px-4 py-2">
+                        <span class="text-gray-800 text-sm">Merch</span>
+                        <button class="ml-2 text-gray-400 hover:text-red-500">
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                    </div>
+              
+                    <!-- Add New Category -->
+                    <div class="fle gap-4 items-center">
+                      <input
+                        type="text"
+                        id="categoryInput"
+                        placeholder="Third category e.g. Books, pen, merch"
+                        class="w-[48%] border border-gray-300 rounded-lg px-4 py-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                      /><br />
+                      <button
+                        id="addCategoryButton"
+                        class="bg-white hover:bg-green-600 hover:text-white text-black text-sm font-semibold mt-4 px-4 py-2 rounded-lg transition duration-300 border-2"
+                      >
+                        + Add Category
+                      </button>
+                    </div>
+                  </div>
+
+
+            
+          
+        </main>
+
+         <!-- Footer -->
+       
+
+
+        
+
+
+
+    </div>
+    <script>
+        const dropdownToggle = document.getElementById("dropdownToggle");
+        const dropdownMenu = document.getElementById("dropdownMenu");
+    
+        dropdownToggle.addEventListener("click", () => {
+          // Toggle visibility of the dropdown menu
+          dropdownMenu.classList.toggle("hidden");
+        });
+    
+        // Close dropdown if clicked outside
+        document.addEventListener("click", (event) => {
+          if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.add("hidden");
+          }
+        });
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.min.js"></script>
+    <script src="js/script.js"></script>
+   
+
+</body>
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Church Profile</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  
+  <!-- Font Awesome Icons for the buttons -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="">
+    <!-- Top Menu -->
+<div class="w-full bg-white py-3 shadow-sm">
+    <div class="container mx-auto flex items-center justify-between px-4">
+    
+    <!-- Left Section (Logo and Welcome Text) -->
+    <div class="flex items-center space-x-6">
+        <!-- Logo -->
+        <h1 class="font-bold text-xl text-black">thechurchedapp</h1>
+        
+     
+       
+    </div>
+    
+    <!-- Middle Section (Search Bar) -->
+    <div class="flex items-center space-x-20">
+         <!-- Welcome Text -->
+        <h2 class="text-xl font-semibold text-black ml-20">Welcome Jane!</h2>
+        
+        <!-- <i class="fas fa-search relative left-2 top-3 text-gray-400"></i> -->
+        <input
+        type="text"
+        placeholder="What would you like to find?"
+        class="search-box bg-gray-100 text-gray-700 rounded-full py-2 px-4 pl-10 w-80 focus:outline-none"
+        />
+    </div>
+
+    <!-- Right Section (Icons and Profile Image) -->
+    <div class="flex items-center space-x-3">
+        <!-- Circle Icon Buttons -->
+        <button class="icon-circle">
+        <i class="fas fa-table text-green-500"></i>
+        </button>
+        <button class="icon-circle">
+        <i class="fas fa-globe text-green-500"></i>
+        </button>
+        <button class="icon-circle">
+        <i class="fas fa-comment-dots text-green-500"></i>
+        </button>
+        <button class="icon-circle">
+        <i class="fas fa-bell text-green-500"></i>
+        </button>
+
+        <!-- User Profile -->
+        <img
+        src="https://via.placeholder.com/40"
+        alt="User Avatar"
+        class="w-10 h-10 rounded-full border-2 border-gray-200 shadow"
+        />
+    </div>
+    </div>
+</div>
+
+<div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-50 rounded-lg border-gray-200 p-4 mr-4">
+        <div class="mb-8">
+            <h1 class="font-bold text-lg">Church Logo</h1>
+        </div>
+        <nav class="space-y-4">
+        <a href="#" class="flex items-center p-2 text-gray-900 bg-gray-100 rounded-lg">
+            <i class="fas fa-tachometer-alt mr-2"></i>
+            <span class="text-sm font-semibold">Dashboard</span>
+        </a>
+        <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+            <i class="fas fa-calendar-alt mr-2"></i>
+            <span class="text-sm">Events</span>
+        </a>
+        <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+            <i class="fas fa-users mr-2"></i>
+            <span class="text-sm">People</span>
+        </a>
+        <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+            <i class="fas fa-photo-video mr-2"></i>
+            <span class="text-sm">Media</span>
+        </a>
+        <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+            <i class="fas fa-wallet mr-2"></i>
+            <span class="text-sm">Finances</span>
+        </a>
+        <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+            <i class="fas fa-check-circle mr-2"></i>
+            <span class="text-sm">Check-ins</span>
+        </a>
+        <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+            <i class="fas fa-building mr-2"></i>
+            <span class="text-sm">Facilities & Resources</span>
+        </a>
+        <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+            <i class="fas fa-chart-line mr-2"></i>
+            <span class="text-sm">Mobile App Analytics</span>
+        </a>
+        </nav>
+
+        <button class="flex fixed bottom-[1px] bg-gray-300 py-3 px-4 w-40 rounded-lg" onclick="openPopupInvite()">
+          <i class="fa fa-user-plus mr-4"></i>
+          <span>Invite</span>
+        </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-8 bg-gray-50 rounded-lg mr-4">
+        <div class="container mx-auto px-4 py-6">
+            <!-- Church Profile Header -->
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <div class="flex flex-col sm:flex-row items-center">
+                <!-- Logo and Name -->
+                <img src="/public/img/logo.png" alt="Church Logo" class="w-20 h-20 rounded-full mb-4 sm:mb-0 sm:mr-4">
+                <div class="text-center sm:text-left">
+                    <h1 class="text-2xl font-semibold">Example Church Name</h1>
+                    <p class="text-gray-500">Church slogan</p>
+                </div>
+                </div>
+            </div>
+        
+            <!-- Navigation Tabs -->
+            <div class="flex flex-wrap mt-6 ">
+                <button class=" p-3 text-sm font-medium text-center border-2 border-gray-400 rounded text-green-600 focus:outline-none mr-2 ml-5" onclick="SwitchMenuToAboutChurch()">
+                    About Church
+                </button>
+                <button class="p-3 text-sm font-medium text-center border-2 border-gray-400 rounded hover:border-gray-200 hover:text-gray-600 mr-2" onclick="SwitchMenuToChurchLeadership()">
+                    Church Leadership
+                </button>
+                <button class="p-3 text-sm font-medium text-center border-2 border-gray-400 rounded :border-gray-200 hover:text-gray-600 mr-2">
+                    Church Terms
+                </button>
+                <button class="p-3 text-sm font-medium text-center border-2 border-gray-400 rounded :border-gray-200 hover:text-gray-600">
+                    App Users
+                </button>
+            </div>
+        
+            <!-- About Church Section -->
+            <div class=" mt-6 p-6 hidden" id="about-church">
+                <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold">About Church</h2>
+                <button class="p-3 text-sm flex items-center border-2 border-gray-400 hover:bg-gray-400" onclick="openEditProfilePopup()">
+                Edit church profile
+                </button>
+                </div>
+                <!-- Information Fields -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-600">Church Name</label>
+                    <input type="text" value="Example church name" class="w-full mt-1 p-2 border border-gray-300 rounded-md">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-600">Contact Number</label>
+                    <input type="text" value="+41 03456789" class="w-full mt-1 p-2 border border-gray-300 rounded-md">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-600">Physical Address</label>
+                    <input type="text" value="Example church physical address" class="w-full mt-1 p-2 border border-gray-300 rounded-md">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-600">Membership Strength</label>
+                    <input type="text" value="500 membership strength" class="w-full mt-1 p-2 border border-gray-300 rounded-md">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-600">Facebook Page Link</label>
+                    <input type="text" value="Church facebook page link" class="w-full mt-1 p-2 border border-gray-300 rounded-md">
+                </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 py-6 " id="church-leadership">
+                <!-- Header Section -->
+               <div class="container mx-auto p-4">
+                   <div class="flex items-center justify-between">
+                       
+                        <div class="flex justify-between items-center ">
+                            <h2 class="text-lg font-semibold mr-2">Church Leadership (4)</h2>
+                            <div class="relative">
+                                <button id="headerMenuToggle" class="flex items-center text-gray-500 hover:text-gray-700 focus:outline-none">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <!-- Dropdown Menu -->
+                                <div id="headerMenu" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg hidden z-50">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        <i class="fas fa-file-pdf mr-2"></i> Export as PDF
+                                    </a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        <i class="fas fa-cog mr-2"></i> Settings
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Filters and Add Button -->
+                        <div class="p-4 flex justify-between items-center">
+                            <div class="relative">
+                                <button id="filtersToggle" class="flex items-center text-gray-700 bg-gray-100 px-4 py-2 rounded-lg hover:bg-gray-200 mr-2">
+                                    Filters <i class="fas fa-chevron-down ml-2"></i>
+                                </button>
+                                <!-- Dropdown -->
+                                <div id="filtersMenu" class="absolute mt-2 w-48 bg-white rounded-md shadow-lg hidden">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Senior Pastor</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Executive Pastor</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Assistant Pastor</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Residing Pastor</a>
+                                </div>
+                            </div>
+                            <button class="text-black border-2 border-gray-400 px-4 py-2 rounded-lg hover:bg-green-600">
+                                 Add Person
+                            </button>
+                        </div>
+
+                   </div>
+               </div>
+   
+   
+               <!-- Leadership Cards -->
+               <div class="container mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                   <!-- Single Card -->
+                   <div class="bg-white rounded-lg shadow-lg p-4 relative">
+                       <img src="https://via.placeholder.com/100" alt="Profile" class="w-20 h-20 rounded-full mx-auto">
+                       <h2 class="text-center font-semibold text-lg mt-4">Harry Shaw</h2>
+                       <p class="text-center text-sm text-gray-500">Residing Pastor</p>
+                       <p class="text-center text-sm text-gray-500">+41 23456789</p>
+                       <button id="cardMenuToggle1" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600">
+                           <i class="fas fa-ellipsis-v"></i>
+                       </button>
+                       <!-- Card Dropdown -->
+                       <div id="cardMenu1" class="absolute top-10 right-0 mt-2 w-40 bg-white rounded-md shadow-lg hidden">
+                           <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                           <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Duplicate</a>
+                           <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Delete</a>
+                           <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Hide Phone Number</a>
+                           <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Show Email Address</a>
+                       </div>
+                   </div>
+   
+                   <div class="bg-white rounded-lg shadow-lg p-4">
+                       <img src="https://via.placeholder.com/100" alt="Profile" class="w-20 h-20 rounded-full mx-auto">
+                       <h2 class="text-center font-semibold text-lg mt-4">Julia Shaw</h2>
+                       <p class="text-center text-sm text-gray-500">Assistant Pastor</p>
+                       <p class="text-center text-sm text-gray-500">+41 23456789</p>
+                   </div>
+   
+                   <div class="bg-white rounded-lg shadow-lg p-4">
+                       <div class="w-20 h-20 rounded-full bg-gray-300 flex items-center justify-center mx-auto">
+                           <span class="text-lg font-semibold">SS</span>
+                       </div>
+                       <h2 class="text-center font-semibold text-lg mt-4">Sam Shaw</h2>
+                       <p class="text-center text-sm text-gray-500">Assistant Pastor</p>
+                       <p class="text-center text-sm text-gray-500">+41 23456789</p>
+                   </div>
+
+                   <div class="bg-white rounded-lg shadow-lg p-4">
+                        <div class="w-20 h-20 rounded-full bg-gray-300 flex items-center justify-center mx-auto">
+                            <span class="text-lg font-semibold">JS</span>
+                        </div>
+                        <h2 class="text-center font-semibold text-lg mt-4">Jane Shaw</h2>
+                        <p class="text-center text-sm text-gray-500">Assistant Pastor</p>
+                        <p class="text-center text-sm text-gray-500">+41 23456789</p>
+                    </div>
+               </div>
+           </div>
+    
+        <!-- Footer -->
+        <footer class="mt-6 text-center text-sm text-gray-500">
+            <p>© 2024 YouLift, Inc | <a href="#" class="text-blue-600">Terms of Service</a> | <a href="#" class="text-blue-600">Privacy Policy</a></p>
+        </footer>
+        </div>
+
+        
+
+    </main>
+  
+    <!-- Edit Church Profile Modal -->
+    <div id="editProfileModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white w-full max-w-lg p-6 mt-16 mb-16 rounded-lg shadow-lg relative">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center pb-4 border-b border-gray-200">
+                <h2 class="text-xl font-semibold">Edit Church Profile</h2>
+                <button class="text-gray-400 hover:text-gray-600" onclick="closeEditProfilePopup()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Scrollable Content -->
+            <div class="max-h-[70vh] overflow-y-auto">
+                <!-- File Upload Section -->
+                <div class="mt-6 mb-4 flex justify-center items-center border-2 border-dashed border-gray-300 rounded-lg p-4 cursor-pointer" onclick="triggerFileInput()">
+                    <div class="text-center">
+                        <i class="fas fa-plus text-3xl text-gray-400"></i>
+                        <p class="text-sm text-gray-500 mt-2">Edit Church Logo</p>
+                        <p class="text-sm text-gray-400">5mb max file size</p>
+                    </div>
+                    <!-- Hidden File Input -->
+                    <input type="file" id="fileInput" class="hidden" onchange="handleFileUpload(event)">
+                </div>
+
+                <!-- Form Fields -->
+                <form>
+                    <!-- Church Name -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700">Church Name</label>
+                        <input type="text" placeholder="Example Church Name" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <!-- Church Slogan -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700">Church Slogan</label>
+                        <input type="text" placeholder="Church slogan (40 characters)" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <!-- Church Phone -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700">Church Phone</label>
+                        <input type="tel" placeholder="+41 03456789" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <!-- Church Phone -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700">Church Street Address</label>
+                        <input type="text" placeholder="Example Church Address" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <!-- State & City -->
+                    <div class="mb-4">
+                        <div class="flex">
+                            <div class="w-1/2 mr-2">
+                                <label class="block text-gray-700">State</label>
+                                <select class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option>State</option>
+                                    <option>Category One</option>
+                                    <option>Category Two</option>
+                                    <option>Category Three</option>
+                                </select>
+                            </div>
+                            <div class="w-1/2">
+                                <label class="block text-gray-700">City</label>
+                                <select class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option>City</option>
+                                    <option>Category One</option>
+                                    <option>Category Two</option>
+                                    <option>Category Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- country & Membership -->
+                    <div class="mb-4">
+                        <div class="flex">
+                            <div class="w-1/2 mr-2">
+                                <label class="block text-gray-700">Country</label>
+                                <select class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option>Country</option>
+                                    <option>Category One</option>
+                                    <option>Category Two</option>
+                                    <option>Category Three</option>
+                                </select>
+                            </div>
+                            <div class="w-1/2">
+                                <label class="block text-gray-700">Membership Strength</label>
+                                <input type="text" placeholder="500" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Item Price -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700">Social Media Link</label>
+                        <input type="text" placeholder="Item price" class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+                        <script src="https://cdn.tailwindcss.com"></script>
+                        <title>Church Leadership</title>
+                    </head>
+                    <body class="bg-gray-50">
+                    
+                        <!-- Header Section -->
+                        <div class="container mx-auto p-4">
+                            <div class="flex items-center justify-between">
+                                <h1 class="text-2xl font-semibold">Church Leadership (4)</h1>
+                                <div class="relative">
+                                    <button id="headerMenuToggle" class="flex items-center text-gray-500 hover:text-gray-700 focus:outline-none">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <!-- Dropdown Menu -->
+                                    <div id="headerMenu" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg hidden">
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            <i class="fas fa-file-pdf mr-2"></i> Export as PDF
+                                        </a>
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            <i class="fas fa-cog mr-2"></i> Settings
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Filters and Add Button -->
+                        <div class="container mx-auto p-4 flex justify-between items-center">
+                            <div class="relative">
+                                <button id="filtersToggle" class="flex items-center text-gray-700 bg-gray-100 px-4 py-2 rounded-lg hover:bg-gray-200">
+                                    Filters <i class="fas fa-chevron-down ml-2"></i>
+                                </button>
+                                <!-- Dropdown -->
+                                <div id="filtersMenu" class="absolute mt-2 w-48 bg-white rounded-md shadow-lg hidden">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Senior Pastor</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Executive Pastor</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Assistant Pastor</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Residing Pastor</a>
+                                </div>
+                            </div>
+                            <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                                <i class="fas fa-plus mr-2"></i> Add Person
+                            </button>
+                        </div>
+                    
+                        <!-- Leadership Cards -->
+                        <div class="container mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                            <!-- Single Card -->
+                            <div class="bg-white rounded-lg shadow-lg p-4 relative">
+                                <img src="https://via.placeholder.com/100" alt="Profile" class="w-20 h-20 rounded-full mx-auto">
+                                <h2 class="text-center font-semibold text-lg mt-4">Harry Shaw</h2>
+                                <p class="text-center text-sm text-gray-500">Residing Pastor</p>
+                                <p class="text-center text-sm text-gray-500">+41 23456789</p>
+                                <button id="cardMenuToggle1" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <!-- Card Dropdown -->
+                                <div id="cardMenu1" class="absolute top-10 right-0 mt-2 w-40 bg-white rounded-md shadow-lg hidden">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Duplicate</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Delete</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Hide Phone Number</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Show Email Address</a>
+                                </div>
+                            </div>
+                    
+                            <!-- Repeat for other profiles -->
+                            <div class="bg-white rounded-lg shadow-lg p-4">
+                                <img src="https://via.placeholder.com/100" alt="Profile" class="w-20 h-20 rounded-full mx-auto">
+                                <h2 class="text-center font-semibold text-lg mt-4">Julia Shaw</h2>
+                                <p class="text-center text-sm text-gray-500">Assistant Pastor</p>
+                                <p class="text-center text-sm text-gray-500">+41 23456789</p>
+                            </div>
+                    
+                            <div class="bg-white rounded-lg shadow-lg p-4">
+                                <div class="w-20 h-20 rounded-full bg-gray-300 flex items-center justify-center mx-auto">
+                                    <span class="text-lg font-semibold">JS</span>
+                                </div>
+                                <h2 class="text-center font-semibold text-lg mt-4">Jane Shaw</h2>
+                                <p class="text-center text-sm text-gray-500">Assistant Pastor</p>
+                                <p class="text-center text-sm text-gray-500">+41 23456789</p>
+                            </div>
+                        </div>
+                    
+                        <!-- Footer -->
+                        <footer class="mt-8 text-center text-gray-500 text-sm">
+                            © 2024 YouLift, Inc | <a href="#" class="underline">Terms of Service</a> | <a href="#" class="underline">Privacy Policy</a>
+                        </footer>
+                    
+                        <!-- JavaScript -->
+                        <script>
+                            // Toggle visibility of dropdowns
+                            const toggleDropdown = (toggleId, menuId) => {
+                                const toggle = document.getElementById(toggleId);
+                                const menu = document.getElementById(menuId);
+                                toggle.addEventListener('click', () => {
+                                    menu.classList.toggle('hidden');
+                                });
+                            };
+                    
+                            // Header menu
+                            toggleDropdown('headerMenuToggle', 'headerMenu');
+                    
+                            // Filters dropdown
+                            toggleDropdown('filtersToggle', 'filtersMenu');
+                    
+                            // Card menu
+                            toggleDropdown('cardMenuToggle1', 'cardMenu1');
+                    
+                            // Close all dropdowns if clicked outside
+                            document.addEventListener('click', (e) => {
+                                const dropdowns = document.querySelectorAll('.hidden:not(.block)');
+                                dropdowns.forEach((dropdown) => {
+                                    if (!dropdown.contains(e.target)) {
+                                        dropdown.classList.add('hidden');
+                                    }
+                                });
+                            });
+                        </script>
+                    </body>
+                    </html>
+                    
+                </form>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex justify-end space-x-2 mt-6">
+                <button type="button" onclick="closePopupModalAddItem()" class="px-4 py-2 text-gray-700 border border-gray-300 rounded-md hover:bg-gray-100">Cancel</button>
+                <button type="submit" class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600">Save</button>
+            </div>
+        </div>
+    </div>
+
+  
+  <!-- JavaScript -->
+  <script>
+    function openEditProfilePopup() {
+      document.getElementById('editProfileModal').classList.remove('hidden');
+    }
+  
+    function closeEditProfilePopup() {
+      document.getElementById('editProfileModal').classList.add('hidden');
+    }
+
+    function SwitchMenuToAboutChurch (){
+        document.getElementById('about-church').classList.remove("hidden")
+        document.getElementById('church-leadership').classList.add("hidden")
+    }
+
+    function SwitchMenuToChurchLeadership(){
+        document.getElementById('about-church').classList.add("hidden")
+        document.getElementById('church-leadership').classList.remove("hidden")
+    }
+
+
+  </script>
+  
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
