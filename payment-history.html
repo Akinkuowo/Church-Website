@@ -122,61 +122,82 @@
 
     <!-- Main Content -->
     <main class="flex-1 p-8 bg-gray-50 rounded-lg mr-4">
-        <div class="max-w-7xl mx-auto px-4 py-6">
+        <div class="border-b pb-6">
+          <h2 class="text-md mb-6 ">Manage Billing / <span class="text-green-500">Payment History</span></h2>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 py-6 bg-gray-200 px-4 py-3 rounded-lg mt-8">
             <!-- Header -->
-            <div class="flex justify-between items-center mb-6">
+            <div class="flex justify-between items-center mb-6 px-3">
               <h1 class="text-lg font-semibold">Payment History</h1>
               <div class="flex items-center space-x-4">
                 <input 
                   type="text" 
                   id="datePicker" 
                   class="border rounded px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-green-500"
-                  placeholder="Select Month & Year"
+                  placeholder="October 2024"
                 />
+                <i class="fas fa-calendar relative right-20"></i>
                 <div class="relative">
-                  <button class="flex items-center px-4 py-2 bg-white text-black text-sm font-semibold rounded hover:bg-green-700 focus:ring focus:ring-green-500">
+                  <button class="flex items-center px-4 py-2 bg-white text-black text-sm font-semibold rounded hover:bg-green-100 focus:ring focus:ring-green-100">
                     Export Payment History <i class="fas fa-chevron-down ml-2"></i>
                   </button>
                   <ul class="absolute right-0 mt-2 bg-white border rounded shadow-md hidden" id="dropdownMenu">
-                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Export as PDF</li>
-                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Export as CSV</li>
+                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><i class="fas fa-download mr-2"></i>Export as PDF</li>
+                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"><i class="fas fa-download mr-2"></i>Export as CSV</li>
                   </ul>
                 </div>
               </div>
             </div>
         
             <!-- Payment History Table -->
-            <div class="bg-white shadow rounded-lg overflow-hidden">
+            <div class="bg-white rounded-lg overflow-hidden">
               <table class="min-w-full table-auto">
-                <thead class="bg-gray-200 text-gray-600 text-sm uppercase">
-                  <tr>
-                    <th class="px-4 py-3 text-left">Date</th>
-                    <th class="px-4 py-3 text-left">Amount</th>
-                    <th class="px-4 py-3 text-left">Billing Plan</th>
-                    <th class="px-4 py-3 text-left">Method</th>
+                <thead class="bg-gr text-gray-600 text-sm uppercase text-center">
+                  <tr class="border-b">
+                    <th class="px-4 py-3 ">Date</th>
+                    <th class="px-4 py-3 ">Amount</th>
+                    <th class="px-4 py-3 ">Billing Plan</th>
+                    <th class="px-4 py-3 ">Method</th>
                     <th class="px-4 py-3">Action</th>
                   </tr>
                 </thead>
-                <tbody class="text-gray-700 text-sm">
+                <tbody class="text-gray-700 text-sm text-center">
                   <tr class="border-b">
                     <td class="px-4 py-3">Oct 2, 2024</td>
                     <td class="px-4 py-3 font-semibold">$45</td>
                     <td class="px-4 py-3">Monthly Plan</td>
-                    <td class="px-4 py-3 text-green-600 font-semibold">Paid</td>
-                    <td class="px-4 py-3 text-right">
-                      <a href="#" class="text-green-600 hover:underline">View receipt</a>
+                    <td class="px-4 py-3 text-green-600 font-semibold"><i class="fas fa-dot-circle text-xs mr-1"></i>Paid</td>
+                    <td class="px-4 py-3 ">
+                      <a href="payment-receipt.html" class=" hover:underline">View receipt</a>
                     </td>
                   </tr>
                   <tr class="border-b">
                     <td class="px-4 py-3">Oct 2, 2024</td>
                     <td class="px-4 py-3 font-semibold">$45</td>
                     <td class="px-4 py-3">Monthly Plan</td>
-                    <td class="px-4 py-3 text-green-600 font-semibold">Paid</td>
-                    <td class="px-4 py-3 text-right">
-                      <a href="#" class="text-green-600 hover:underline">View receipt</a>
+                    <td class="px-4 py-3 text-green-600 font-semibold"><i class="fas fa-dot-circle text-xs mr-1"></i>Paid</td>
+                    <td class="px-4 py-3 ">
+                      <a href="payment-receipt.html" class="hover:underline">View receipt</a>
                     </td>
                   </tr>
-                  <!-- Repeat rows as needed -->
+                  <tr class="border-b">
+                    <td class="px-4 py-3">Oct 2, 2024</td>
+                    <td class="px-4 py-3 font-semibold">$45</td>
+                    <td class="px-4 py-3">Monthly Plan</td>
+                    <td class="px-4 py-3 text-green-600 font-semibold"><i class="fas fa-dot-circle text-xs mr-1"></i>Paid</td>
+                    <td class="px-4 py-3 ">
+                      <a href="payment-receipt.html" class="hover:underline">View receipt</a>
+                    </td>
+                  </tr> 
+                  <tr class="border-b">
+                    <td class="px-4 py-3">Oct 2, 2024</td>
+                    <td class="px-4 py-3 font-semibold">$45</td>
+                    <td class="px-4 py-3">Monthly Plan</td>
+                    <td class="px-4 py-3 text-green-600 font-semibold"><i class="fas fa-dot-circle text-xs mr-1"></i>Paid</td>
+                    <td class="px-4 py-3 ">
+                      <a href="payment-receipt.html" class="hover:underline">View receipt</a>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
               <!-- Pagination -->

@@ -122,16 +122,23 @@
 
     <!-- Main Content -->
     <main class="flex-1 p-8 bg-gray-50 rounded-lg mr-4">
-        <div class="max-w-4xl mx-auto p-6">
+        <div class="max-w-4xl mx-auto p-6 bg-white">
             <!-- Page Title -->
             <h1 class="text-2xl font-bold mb-6">Manage Billing</h1>
     
             <!-- Billing Plan Card -->
-            <div class="bg-white shadow rounded-lg p-6 mb-6">
+            <div class="bg-gray-100 shadow rounded-lg p-6 mb-6">
                 <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-gray-500">Your plan</p>
-                        <h2 class="text-xl font-semibold">Standard Tier</h2>
+                    <div class="w-full">
+                        <div class="flex justify-between w-full">
+                            <div>
+                                <p class="text-gray-500 text-xs">Your plan</p>
+                                <h2 class="text-sm font-semibold ">Standard Tier</h2>
+                            </div>
+                            <div>
+                                <a href="payment-plan.html" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md border-2 border-black">Change plan</a>
+                            </div>
+                        </div>
                         <p class="text-sm text-gray-600 mt-2">Paid monthly. Your next bill is <span class="font-medium">$45</span> on the <span class="font-medium">26th of May, 2025</span>.</p>
                         <div class="flex items-center mt-4 text-sm text-gray-700">
                             <i class="fab fa-cc-visa text-xl text-blue-600 mr-2"></i>
@@ -139,12 +146,13 @@
                             <a href="#" class="text-blue-500 hover:underline ml-2">Update</a>
                         </div>
                     </div>
-                    <a href="payment-plan.html" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded">Change plan</a>
+                
+                   
                 </div> 
             </div>
     
             <!-- Payment Information Section -->
-            <div class="bg-white shadow rounded-lg p-6 mb-6 cursor-pointer">
+            <div class="bg-gray-100 shadow rounded-lg p-6 mb-6 cursor-pointer">
                 <div class="flex justify-between items-center">
                     <div>
                         <h3 class="text-lg font-medium">Payment Information</h3>
@@ -155,7 +163,7 @@
             </div>
     
             <!-- Payment History Section -->
-            <div class="bg-white shadow rounded-lg p-6 cursor-pointer">
+            <div class="bg-gray-100 shadow rounded-lg p-6 cursor-pointer">
                 <div class="flex justify-between items-center">
                     <div>
                         <h3 class="text-lg font-medium">Payment History</h3>

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons for the buttons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
   <title>Change Your Plan</title>
 </head>
 <body class="">
@@ -109,6 +111,9 @@
 
     <!-- Main Content -->
     <main class="flex-1 p-8 bg-gray-50 rounded-lg mr-4">
+        <div class="border-b pb-6">
+          <h2 class="text-md mb-6 ">Manage Billing / <span class="text-green-500">Change Plan</span></h2>
+        </div>
         <div class="max-w-6xl mx-auto px-4 py-8">
             <!-- Header -->
             <div class="mb-6">
@@ -119,66 +124,67 @@
                 
                 </div>
               <div class="flex space-x-4 mt-4">
-                <button class="px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-lg">Pay Monthly</button>
-                <button class="px-4 py-2 text-sm font-semibold text-gray-700 border rounded-lg">Pay Annually</button>
+                <button class="px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full border border-black">Pay Monthly</button>
+                <button class="px-4 py-2 text-sm font-semibold text-gray-700 border rounded-full border-black">Pay Annually</button>
               </div>
             </div>
         
             <!-- Plans -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <!-- Basic Tier -->
-              <div class="border rounded-lg bg-white shadow-sm p-6">
-                <h2 class="text-lg font-bold">Basic Tier</h2>
+              <div class="border rounded-lg bg-whit p-6 border-black">
+                <h2 class="text-lg font-bold mb-4">Basic Tier</h2>
                 <p class="text-4xl font-bold mt-2">$25<span class="text-base font-medium">/mo</span></p>
-                <p class="text-sm text-green-600 mt-2">Save 20% annually</p>
-                <p class="text-sm text-gray-600 mb-8">Our first tier with access to people, events, finances, check-ins, and media. But only embeds for media, no uplaod</p>
+                <p class="text-sm text-green-600 mt-2 mb-8">Save 20% annually</p>
+                <p class="text-sm text-gray-600 mb-2">Our first tier with access to people, events, finances, check-ins, and media. But only embeds for media, no uplaod</p>
                 <button class="w-full mt-6 border-2 text-black py-2 rounded-lg hover:bg-black hover:text-white">Select</button>
                 <ul class="text-sm mt-4 space-y-2">
-                  <li><i class="fas fa-check text-green-500"></i> People less than 500</li>
-                  <li><i class="fas fa-check text-green-500"></i> Unlimited events</li>
-                  <li><i class="fas fa-check text-green-500"></i> Media Embeds</li>
-                  <li><i class="fas fa-check text-green-500"></i> General Finances</li>
-                  <li><i class="fas fa-check text-green-500"></i> Daily Check-ins</li>
-                  <li><i class="fas fa-check text-green-500"></i> Mobile App Management</li>
+                  <li><i class="fas fa-user text-gray-400 mr-4"></i> People less than 500</li>
+                  <li><i class="fas fa-calendar text-gray-400 mr-4"></i> Unlimited events</li>
+                  <li><i class="fas fa-folder text-gray-400 mr-4"></i> Media Embeds</li>
+                  <li><i class="fas fa-file text-gray-400 mr-4"></i> General Finances</li>
+                  <li><i class="fas fa-file-text text-gray-400 mr-4"></i> Daily Check-ins</li>
+                  <li><i class="fas fa-bar-chart text-gray-400 mr-4"></i> Mobile App Management</li>
                 </ul>
                 
               </div>
         
               <!-- Standard Tier -->
-              <div class="border rounded-lg bg-white shadow-sm p-6">
-                <h2 class="text-lg font-bold">Standard Tier</h2>
+              <div class="border rounded-lg bg-whit  p-6 border-black">
+                <h2 class="text-lg font-bold mb-4">Standard Tier</h2>
                 <p class="text-4xl font-bold mt-2">$45<span class="text-base font-medium">/mo</span></p>
-                <p class="text-sm text-green-600 mt-2">Save 20% annually</p>
-                <p class="text-sm text-gray-600 mb-8">Our second tier with access to all features including facilities & resources, and store. Media upload limit.</p>
+                <p class="text-sm text-green-600 mt-2 mb-8">Save 20% annually</p>
+                <p class="text-sm text-gray-600 mb-2">Our second tier with access to all features including facilities & resources, and store. Media upload limit.</p>
+
                 <button class="w-full mt-6 border-2 text-black py-2 rounded-lg hover:bg-black hover:text-white">Select</button>
                 <ul class="text-sm mt-4 space-y-2">
-                  <li><i class="fas fa-check text-green-500"></i> People less than 1000</li>
-                  <li><i class="fas fa-check text-green-500"></i> Unlimited events with scheduling</li>
-                  <li><i class="fas fa-check text-green-500"></i> Media uploads (max 500gb/month)</li>
-                  <li><i class="fas fa-check text-green-500"></i> General Finances</li>
-                  <li><i class="fas fa-check text-green-500"></i> Daily Check-ins</li>
-                  <li><i class="fas fa-check text-green-500"></i> Mobile App Management</li>
-                  <li><i class="fas fa-check text-green-500"></i> Facilities & Resources</li>
-                  <li><i class="fas fa-check text-green-500"></i> Store</li>
+                  <li><i class="fas fa-user text-gray-400 mr-4"></i> People less than 1000</li>
+                  <li><i class="fas fa-calendar text-gray-400 mr-4"></i> Unlimited events with scheduling</li>
+                  <li><i class="fas fa-folder text-gray-400 mr-4"></i> Media uploads (max 500gb/month)</li>
+                  <li><i class="fas fa-file text-gray-400 mr-4"></i> General Finances</li>
+                  <li><i class="fas fa-file-text text-gray-400 mr-4"></i> Daily Check-ins</li>
+                  <li><i class="fas fa-bar-chart text-gray-400 mr-4"></i> Mobile App Management</li>
+                  <li><i class="fas fa-briefcase text-gray-400 mr-4"></i> Facilities & Resources</li>
+                  <li><i class="fas fa-shopping-bag text-gray-400 mr-4"></i> Store</li>
                 </ul>
                 
               </div>
         
               <!-- Premium Tier -->
-              <div class="border rounded-lg bg-white shadow-sm p-6">
+              <div class="border rounded-lg bg-whit  p-6 border-black">
                 <h2 class="text-lg font-bold">Premium Tier</h2>
                 <p class="text-4xl font-bold mt-2">Custom<span class="text-base font-medium">/mo</span></p>
-                <p class="text-sm text-gray-600 mb-8 mt-5">Our third tier with access to all features including facilities & resources, and store. No limit.</p>
+                <p class="text-sm text-gray-600 mb-8 mt-12">Our third tier with access to all features including facilities & resources, and store. No limit.</p>
                  <button class="w-full mt-6 border-2 text-black py-2 rounded-lg hover:bg-black hover:text-white">Contact Support Team</button>
                 <ul class="text-sm mt-4 space-y-2">
-                  <li><i class="fas fa-check text-green-500"></i> Unlimited people</li>
-                  <li><i class="fas fa-check text-green-500"></i> Unlimited events with scheduling</li>
-                  <li><i class="fas fa-check text-green-500"></i> Unlimited media uploads</li>
-                  <li><i class="fas fa-check text-green-500"></i> General Finances</li>
-                  <li><i class="fas fa-check text-green-500"></i> Daily Check-ins</li>
-                  <li><i class="fas fa-check text-green-500"></i> Mobile App Management</li>
-                  <li><i class="fas fa-check text-green-500"></i> Facilities & Resources</li>
-                  <li><i class="fas fa-check text-green-500"></i> Store</li>
+                  <li><i class="fas fa-user text-gray-400 mr-4"></i> Unlimited people</li>
+                  <li><i class="fas fa-calendar text-gray-400 mr-4"></i> Unlimited events with scheduling</li>
+                  <li><i class="fas fa-folder text-gray-400 mr-4"></i> Unlimited media uploads</li>
+                  <li><i class="fas fa-file text-gray-400 mr-4"></i> General Finances</li>
+                  <li><i class="fas fa-file-text text-gray-400 mr-4"></i> Daily Check-ins</li>
+                  <li><i class="fas fa-bar-chart text-gray-400 mr-4"></i> Mobile App Management</li>
+                  <li><i class="fas fa-briefcase text-gray-400 mr-4"></i> Facilities & Resources</li>
+                  <li><i class="fas fa-shopping-bag text-gray-400 mr-4"></i> Store</li>
                 </ul>
                
               </div>
