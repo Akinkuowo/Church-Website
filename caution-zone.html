@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Settings</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  
+    <!-- Font Awesome Icons for the buttons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="">
+    <!-- Top Menu -->
+    <div class="w-full bg-white py-3 shadow-sm">
+        <div class="container mx-auto flex items-center justify-between px-4">
+    
+            <!-- Left Section (Logo and Welcome Text) -->
+            <div class="flex items-center space-x-6">
+                <!-- Logo -->
+                <h1 class="font-bold text-xl text-black">thechurchedapp</h1>
+            </div>
+            
+            <!-- Middle Section (Search Bar) -->
+            <div class="flex items-center space-x-20">
+                <!-- Welcome Text -->
+                <h2 class="text-xl font-semibold text-black ml-20">Welcome Jane!</h2>
+                
+                <!-- <i class="fas fa-search relative left-2 top-3 text-gray-400"></i> -->
+                <input
+                type="text"
+                placeholder="What would you like to find?"
+                class="search-box bg-gray-100 text-gray-700 rounded-full py-2 px-4 pl-10 w-80 focus:outline-none"
+                />
+            </div>
+
+            <!-- Right Section (Icons and Profile Image) -->
+            <div class="flex items-center space-x-3">
+                <!-- Circle Icon Buttons -->
+                <button class="icon-circle">
+                    <i class="fas fa-table text-green-500"></i>
+                </button>
+                <button class="icon-circle">
+                    <i class="fas fa-globe text-green-500"></i>
+                </button>
+                <button class="icon-circle">
+                    <i class="fas fa-comment-dots text-green-500"></i>
+                </button>
+                <button class="icon-circle">
+                    <i class="fas fa-bell text-green-500"></i>
+                </button>
+
+                <!-- User Profile -->
+                <img
+                    src="https://via.placeholder.com/40"
+                    alt="User Avatar"
+                    class="w-10 h-10 rounded-full border-2 border-gray-200 shadow"
+                />
+            </div>
+        </div>
+    </div>
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-50 rounded-lg border-gray-200 p-4 mr-4">
+            <div class="mb-8">
+                <h1 class="font-bold text-lg">Church Logo</h1>
+            </div>
+            <nav class="space-y-4">
+            <a href="#" class="flex items-center p-2 text-gray-900 bg-gray-100 rounded-lg">
+                <i class="fas fa-tachometer-alt mr-2"></i>
+                <span class="text-sm font-semibold">Dashboard</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                <span class="text-sm">Events</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-users mr-2"></i>
+                <span class="text-sm">People</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-photo-video mr-2"></i>
+                <span class="text-sm">Media</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-wallet mr-2"></i>
+                <span class="text-sm">Finances</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-check-circle mr-2"></i>
+                <span class="text-sm">Check-ins</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-building mr-2"></i>
+                <span class="text-sm">Facilities & Resources</span>
+            </a>
+            <a href="#" class="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <i class="fas fa-chart-line mr-2"></i>
+                <span class="text-sm">Mobile App Analytics</span>
+            </a>
+            </nav>
+
+            <button class="flex fixed bottom-[1px] bg-gray-300 py-3 px-4 w-40 rounded-lg" onclick="openPopupInvite()">
+            <i class="fa fa-user-plus mr-4"></i>
+            <span>Invite</span>
+            </button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 items-center justify-center p-8 bg-gray-50 rounded-lg mr-4">
+            <div class="border-b pb-6">
+                <h2 class="text-md mb-6">Settings / <span class="text-green-500">Caution Zone</span></h2>
+            </div>
+            <div class="w-full max-w-lg mx-auto bg-white px-8 py-4 mt-4">
+                <h1 class="text-2xl font-bold mb-6">Caution Zone</h1>
+                <div class="space-y-4">
+                  <!-- Log Out  -->
+                  <div class="bg-gray-200 rounded-lg p-4 hover:bg-gray-100">
+                    <div class="flex items-center justify-between  ">
+                      <h2 class="text-md font-medium">Log Out</h2>
+                      <p class="text-xs cursor-pointer" onclick="logoutAllUsers()">Log out all users</p>
+                    </div>
+                    <p class="text-xs text-gray-500">Log out all users</p>
+                  </div>
+            
+                  <!-- log out specific -->
+                  <div class="bg-gray-200 rounded-lg p-4 hover:bg-gray-100">
+                    <div class="flex items-center justify-between  ">
+                      <h2 class="text-md font-medium">Log Out specific users</h2>
+                      <p class="text-xs cursor-pointer" onclick="logoutSpecificUsers()">Continue to log out</p>
+                    </div>
+                    <p class="text-xs text-gray-500">Select specific users to log out</p>
+                  </div>
+            
+                  <!-- Delete account -->
+                  <div class="bg-gray-200 rounded-lg p-4 hover:bg-gray-100">
+                    <div class="flex items-center justify-between  ">
+                      <h2 class="text-md font-medium">Delete church account</h2>
+                      <p class="text-xs text-red-500 cursor-pointer" onclick="deleteChurchAccount()">Delete church account</p>
+                    </div>
+                    <p class="text-xs text-gray-500">Continue this action with certainty</p>
+                  </div>
+                 
+                </div>
+              </div>
+            
+        </main>
+
+        <!-- Logout all users Modal -->
+        <div id="logoutAll" class="hidden fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+            <div class="bg-white p-6 rounded-md shadow-lg w-[30rem] relative">
+                <div class="flex items-center justify-between">
+                    <h2 class="font-bold text-xl">Log out all users</h2>
+                    <!-- Close Icon -->
+                    <button onclick="closeLogoutAllUsers()" class="absolute top-4 right-4 text-gray-500 hover:text-black">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <!-- Description -->
+                <p class="text-gray-500 mb-6">
+                <span id="Message"></span> Are you sure you want to logout all users? This means everyone would have to log in differently again.
+                </p>
+
+               
+
+                <!-- Buttons -->
+                <div class="flex justify-end space-x-4">
+                    <button onclick="closeLogoutAllUsers()" class="border border-gray-300 px-4 py-2 rounded-md text-gray-600 hover:bg-gray-100">
+                        Cancel
+                    </button>
+                    <button onclick="handleImport()" class="bg-black text-white px-4 py-2 rounded-md hover:bg-red-300">
+                        Log out
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- logout specific users Model -->
+        <div id="logoutspecificusers" class="hidden fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+            <div class="bg-white w-full max-w-2xl rounded-lg shadow-lg p-6">
+                <!-- Header -->
+                <div class="flex justify-between items-center border-b pb-4 mb-4">
+                  <h2 class="text-2xl font-semibold">Log out specific users</h2>
+                  <button class="text-gray-500 hover:text-gray-700" onclick="closeLogoutSpecificUsers()">
+                    <i class="fas fa-times text-xl"></i>
+                  </button>
+                </div>
+            
+                <!-- Content -->
+                <p class="text-gray-600 mb-6">
+                  Are you sure you want to log out specific users? If yes, select the users you want to log out of the account.
+                </p>
+            
+                <!-- User List -->
+                <div class="space-y-4">
+                  <!-- User Item 1 -->
+                  <div class="flex justify-between items-center space-x-2">
+                    <div class="flex items-center space-x-3 w-full">
+                        <div >
+                          <img src="https://i.pravatar.cc/40?img=3" alt="User Avatar" class="w-10 h-10 rounded-full">
+                        </div>
+                        <div class="bg-gray-200 border-full border border-gray-200 py-2 px-4 w-1/2">
+                            <p class="font-medium text-gray-800">Harry Shaw</p>
+                        </div>
+                        <div class="bg-gray-200 border-sm py-2 px-4 w-1/2">
+                            <p class="font-medium text-gray-800">Admin</p>
+                        </div>
+                    </div>
+                    <input type="checkbox" class="w-5 h-5 text-green-500 accent-white border">
+                  </div>
+            
+                  <!-- User Item 2 -->
+                  <div class="flex justify-between items-center space-x-2">
+                    <div class="flex items-center space-x-3 w-full">
+                        <div >
+                          <img src="https://i.pravatar.cc/40?img=5" alt="User Avatar" class="w-10 h-10 rounded-full">
+                        </div>
+                        <div class="bg-gray-200 rounded-md border border-gray-200 py-2 px-4 w-1/2">
+                            <p class="font-medium text-gray-800">Kim Lim</p>
+                        </div>
+                        <div class="bg-gray-200 border-sm py-2 px-4 w-1/2">
+                            <p class="font-medium text-gray-800">Admin</p>
+                        </div>
+                    </div>
+                    <input type="checkbox" checked class="w-5 h-5 text-green-500 accent-white border">
+                  </div>
+            
+                  <!-- User Item 3 -->
+                  <div class="flex justify-between items-center space-x-2">
+                    <div class="flex items-center space-x-3 w-full">
+                        <div >
+                          <img src="https://i.pravatar.cc/40?img=5" alt="User Avatar" class="w-10 h-10 rounded-full">
+                        </div>
+                        <div class="bg-gray-200 rounded-md border border-gray-200 py-2 px-4 w-1/2">
+                            <p class="font-medium text-gray-800">Julia Shaw</p>
+                        </div>
+                        <div class="bg-gray-200 border-sm py-2 px-4 w-1/2">
+                            <p class="font-medium text-gray-800">Check-in</p>
+                        </div>
+                    </div>
+                    <input type="checkbox" checked class="w-5 h-5 text-green-500 accent-white border">
+                  </div>
+            
+                  <!-- User Item 4 -->
+                  <div class="flex justify-between items-center space-x-2">
+                    <div class="flex items-center space-x-3 w-full">
+                        <div >
+                          <img src="https://i.pravatar.cc/40?img=5" alt="User Avatar" class="w-10 h-10 rounded-full">
+                        </div>
+                        <div class="bg-gray-200 rounded-md border border-gray-200 py-2 px-4 w-1/2">
+                            <p class="font-medium text-gray-800">Charity Sleigh</p>
+                        </div>
+                        <div class="bg-gray-200 border-sm py-2 px-4 w-1/2">
+                            <p class="font-medium text-gray-800">People editor</p>
+                        </div>
+                    </div>
+                    <input type="checkbox" class="w-5 h-5 text-green-500 accent-white border">
+                    
+                  </div>
+                </div>
+            
+                <!-- Buttons -->
+                <div class="flex justify-end space-x-4 mt-6">
+                  <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300" onclick="closeLogoutSpecificUsers()">
+                    Cancel
+                  </button>
+                  <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">
+                    Log out
+                  </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- delete church account model -->
+        <div id="deleteAccount" class="hidden fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+            <div class="bg-white p-6 rounded-md shadow-lg w-[30rem] relative">
+                <div class="flex items-center justify-between">
+                    <h2 class="font-bold text-xl mb-6">Delete church account</h2>
+                    <!-- Close Icon -->
+                    <button onclick="closeDeleteChurchAccount()" class="absolute top-4 right-4 text-gray-500 hover:text-black">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <!-- Description -->
+                <p class="text-gray-500 mb-6">
+                <span id="Message"></span> Are you sure you want to delete your church profile? This action cannot be undone and you will lose access to this account.
+                </p>
+
+               
+
+                <!-- Buttons -->
+                <div class="flex justify-end space-x-4">
+                    <button onclick="closeDeleteChurchAccount()" class="border border-gray-300 px-4 py-2 rounded-md text-gray-600 hover:bg-gray-100">
+                        Cancel
+                    </button>
+                    <button  class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-300">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function logoutAllUsers(){
+            document.getElementById("logoutAll").classList.remove("hidden")
+        }
+
+        function closeLogoutAllUsers() {
+            document.getElementById("logoutAll").classList.add("hidden")
+        }
+
+        function logoutSpecificUsers(){
+            document.getElementById("logoutspecificusers").classList.remove("hidden")
+        }
+
+        function closeLogoutSpecificUsers() {
+            document.getElementById("logoutspecificusers").classList.add("hidden")
+        }
+
+        function deleteChurchAccount(){
+            document.getElementById("deleteAccount").classList.remove("hidden")
+        }
+
+        function closeDeleteChurchAccount(){
+            document.getElementById("deleteAccount").classList.add("hidden")
+        }
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
